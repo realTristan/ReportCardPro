@@ -1,0 +1,28 @@
+{
+  "student_id": {
+    "name": "tristan",
+    "id": "id",
+    "courses": [
+      {
+        "id": "id",
+        "name": "name",
+        "grade": "grade"
+      },
+      {
+        "id": "id",
+        "name": "name",
+        "grade": "grade"
+      },
+      {
+        "id": "id",
+        "name": "name",
+        "grade": "grade"
+      },
+      {
+        "id": "id",
+        "name": "name",
+        "grade": "grade"
+      }
+    ]
+  }
+}
