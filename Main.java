@@ -3,7 +3,7 @@ import javax.swing.JFrame;
 class Main {
     public static void main(String[] args) {
         // Initialize a new JFrame
-        JFrame window = new JFrame("Problem Set 5 Bonus");
+        JFrame window = new JFrame("Report Card Pro");
 
         // Establish Canvas
         Canvas content = new Canvas();
