@@ -1,6 +1,6 @@
 {
   "java.project.referencedLibraries": [
     "lib/**/*.jar",
-    "jars/json-simple-1.1.jar"
+    "app/jars/json-simple-1.1.jar"
   ]
 }
