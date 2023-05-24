@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+
 import Components.Canvas;
 import Utils.Cache;
 
@@ -19,5 +20,6 @@ class Main {
     window.setLayout(null);
     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     window.setVisible(true);
+    window.setResizable(false);
   }
 }
