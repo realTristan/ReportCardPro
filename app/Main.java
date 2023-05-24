@@ -5,6 +5,9 @@ import javax.swing.JFrame;
 import Components.Canvas;
 import Utils.Cache;
 
+/**
+ * The main class for the application.
+ */
 class Main {
   public static void main(String[] args) {
     // Initialize a new JFrame

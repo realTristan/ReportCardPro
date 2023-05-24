@@ -5,7 +5,16 @@ import Components.Headers.*;
 import Components.Inputs.SearchInput;
 import Components.Lists.ResultsList;
 
+/**
+ * A class for creating search pages.
+ */
 public class SearchPage {
+	/**
+	 * Constructs a new SearchPage object and initializes it with the necessary
+	 * components.
+	 *
+	 * @param canvas the canvas to add the components to
+	 */
 	public SearchPage(Canvas canvas) {
 		// Text headers
 		new MainHeader(canvas);

@@ -5,30 +5,45 @@ import java.util.List;
 
 import org.json.simple.JSONObject;
 
+/**
+ * A class for caching students.
+ */
 public class Cache {
-	public JSONObject students = new JSONObject();
-	public Cache() {
-		// Read the students.json file
-		try {
-			students = Json.read("students.json");
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-	}
+  public JSONObject students = new JSONObject();
 
-	public void export() {
-		try {
-			Json.write("students.json", students);
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-	}
+  /**
+ * Constructs a new Cache object and initializes it with the contents of the "students.json" file.
+ */
+  public Cache() {
+    try {
+      students = Json.read("students.json");
+    } catch (Exception e) {
+      System.out.println(e);
+    }
+  }
 
-	public List<JSONObject> getStudents(String value) {
-    if (value.length() == 0 ) {
+  /**
+   * Exports the current cache of students to a JSON file.
+   */
+  public void export() {
+    try {
+      Json.write("students.json", students);
+    } catch (Exception e) {
+      System.out.println(e);
+    }
+  }
+
+  /**
+   * Returns a list of students whose name starts with the given value.
+   *
+   * @param value the value to search for in the student names
+   * @return a list of JSONObjects representing the matching students
+   */
+  public List<JSONObject> getStudents(String value) {
+    if (value.length() == 0) {
       return new ArrayList<JSONObject>();
     }
-    
+
     // Create a dynamic array
     List<JSONObject> res = new ArrayList<JSONObject>();
 
