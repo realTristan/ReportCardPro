@@ -1,43 +1,20 @@
 package Components.Inputs;
 
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-
 import Components.Canvas;
-import Components.ResultsList;
+import Components.Lists.ResultsList;
 
-public class SearchInput {
-  public SearchInput(Canvas canvas, int x, int y, ResultsList rl) {
-    // Create a new input field
-    Input input = new Input(x, y, 150, 30);
-
-    // Set the listener
-    this.setListener(canvas, input, rl);
-
-    // Add the input to the canvas
-    canvas.add(input);
+public class SearchInput extends Input {
+  public SearchInput(Canvas canvas, int x, int y) {
+    super(x, y, 150, 30);
+    canvas.add(this);
   }
 
   // Set the listener
-  public void setListener(Canvas canvas, Input input, ResultsList rl) {
-    input.getDocument().addDocumentListener((DocumentListener) new DocumentListener() {
-      @Override
-      public void insertUpdate(DocumentEvent e) {
-        String value = input.getText();
-        rl.setStudents(canvas, value);
-      }
-
-      @Override
-      public void removeUpdate(DocumentEvent e) {
-        String value = input.getText();
-        rl.setStudents(canvas, value);
-      }
-
-      @Override
-      public void changedUpdate(DocumentEvent e) {
-        String value = input.getText();
-        rl.setStudents(canvas, value);
-      }
-    });
+  public void setListener(Canvas canvas, ResultsList rl) {
+    SearchInput si = this;
+    super.addCaretListener(e -> {
+      String value = si.getText();
+      rl.setStudents(canvas, value);
+  });
   }
 }

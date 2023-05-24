@@ -3,6 +3,7 @@ package Pages;
 import Components.*;
 import Components.Headers.*;
 import Components.Inputs.SearchInput;
+import Components.Lists.ResultsList;
 
 public class SearchPage {
 	public SearchPage(Canvas canvas) {
@@ -13,6 +14,9 @@ public class SearchPage {
 
 		// Search Bar
 		ResultsList rl = new ResultsList(canvas, 40, 150, 300, 150);
-		new SearchInput(canvas, 100, 100, rl);
+		SearchInput si = new SearchInput(canvas, 100, 100);
+
+		// Set the search input listener
+		si.setListener(canvas, rl);
 	}
 }

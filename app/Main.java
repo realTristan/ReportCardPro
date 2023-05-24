@@ -1,3 +1,5 @@
+import java.awt.BorderLayout;
+
 import javax.swing.JFrame;
 
 import Components.Canvas;
@@ -17,7 +19,7 @@ class Main {
 
     // Set the UI Parameters
     window.setSize(400, 400);
-    window.setLayout(null);
+    window.setLayout(new BorderLayout());
     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     window.setVisible(true);
     window.setResizable(false);

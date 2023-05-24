@@ -24,7 +24,11 @@ public class Cache {
 		}
 	}
 
-	public JSONObject[] getStudents(String value) {
+	public List<JSONObject> getStudents(String value) {
+    if (value.length() == 0 ) {
+      return new ArrayList<JSONObject>();
+    }
+    
     // Create a dynamic array
     List<JSONObject> res = new ArrayList<JSONObject>();
 
@@ -43,7 +47,6 @@ public class Cache {
     }
 
     // Return the results
-    JSONObject[] arr = new JSONObject[res.size()];
-    return res.toArray(arr);
+    return res;
   }
 }
