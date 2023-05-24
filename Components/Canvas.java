@@ -1,3 +1,4 @@
+package Components;
 import java.awt.*;
 import javax.swing.*;
 
@@ -12,8 +13,7 @@ public class Canvas extends JPanel {
         super.paintComponent(g);
 
         // make a button
-        JButton button = new JButton("Click me!");
-        button.setBounds(100, 100, 100, 100);
-        add(button);
+        Button.importGrades(this);
+        Button.newSubject(this);
     }
 }
