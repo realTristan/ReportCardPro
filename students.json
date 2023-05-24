@@ -1,6 +1,7 @@
 {
   "student_id": {
-    "name": "tristan",
+    "first_name": "tristan",
+    "last_name": "simpson",
     "id": "id",
     "courses": [
       {
@@ -26,7 +27,8 @@
     ]
   },
   "student_id2": {
-    "name": "michael",
+    "first_name": "tristan",
+    "last_name": "simpson",
     "id": "id",
     "courses": [
       {

@@ -46,7 +46,7 @@ public class ResultsList {
     // Iterate over the students
     for (JSONObject student : students) {
       // Get the students name
-      String name = (String) student.get("name");
+      String name = (String) student.get("last_name");
 
       // Create the button
       Button button = new Button(name, 0, 0, 300, 30);
