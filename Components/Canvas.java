@@ -12,8 +12,15 @@ public class Canvas extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        // make a button
-        Button.importGrades(this);
-        Button.newSubject(this);
+        // Make the import grades and new subject buttons
+        // Button.importGrades(this);
+        Button.addSubject(this, 10, 180);
+
+        // Make the new subject input
+        Input.newSubject(this, 10, 60);
+        Input.newSubject(this, 10, 90);
+        Input.newSubject(this, 10, 120);
+        Input.newSubject(this, 10, 150);
+        Text.Header(this);
     }
 }
