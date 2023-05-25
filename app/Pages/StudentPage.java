@@ -45,7 +45,6 @@ public class StudentPage extends Canvas {
    *
    * @param student the student data
    */
-  @Override
   public void paintComponent(Graphics g) {
     super.paintComponent(g);
 
