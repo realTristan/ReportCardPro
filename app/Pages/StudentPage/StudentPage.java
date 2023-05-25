@@ -14,10 +14,8 @@ import Pages.StudentPage.Components.SubjectInput;
  */
 public class StudentPage extends JPanel {
   /**
-   * Constructs a new StudentPage object and initializes it with the necessary
-   * components.
+   * Constructs a new StudentPage object.
    *
-   * @param p the canvas to add the components to
    */
   public StudentPage() {
     super();

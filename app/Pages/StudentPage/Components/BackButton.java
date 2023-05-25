@@ -8,10 +8,10 @@ import Pages.Manager;
  */
 public class BackButton extends Button {
     /**
-     * Constructs a new Back object and sets its bounds to the specified location
-     * and size.
+     * Constructs a new BackButton object and sets its bounds to the specified
+     * location and size.
      *
-     * @param canvas the canvas to add the button to
+     * @param manager the manager to use for adding the button to the canvas
      */
     public BackButton(Manager manager) {
         // Create the button

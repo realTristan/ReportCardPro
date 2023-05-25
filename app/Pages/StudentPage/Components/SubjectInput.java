@@ -4,17 +4,16 @@ import Components.Input;
 import Pages.Manager;
 
 /**
- * A class for creating input fields.
+ * A class for creating subject inputs.
  */
 public class SubjectInput extends Input {
   /**
-   * Constructs a new SubjectInput object and sets its bounds to the specified
-   * location and size.
-   *
-   * @param canvas the canvas to add the input to
-   * @param x      the x-coordinate of the input
-   * @param y      the y-coordinate of the input
-   */
+ * Constructs a new SubjectInput object and sets its bounds to the specified location and size.
+ *
+ * @param manager the manager to use for adding the input to the canvas
+ * @param x the x-coordinate of the input
+ * @param y the y-coordinate of the input
+ */
   public SubjectInput(Manager manager, int x, int y) {
     super(x, y);
 

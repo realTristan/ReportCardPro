@@ -13,10 +13,11 @@ import Pages.Manager;
  */
 public class ResultsList extends JScrollPane {
   /**
-   * Constructs a new ResultsList object and adds it to the given canvas at the
-   * specified location and size.
+   * Constructs a new ResultsList object and adds it to the search page canvas at
+   * the specified location.
    *
-   * @param p the canvas to add the results list to
+   * @param manager the manager to use for adding the results list to the search
+   *                page canvas
    */
   public ResultsList(Manager manager) {
     super();
@@ -34,8 +35,9 @@ public class ResultsList extends JScrollPane {
   /**
    * Sets the students in the results list based on the given search value.
    *
-   * @param p the canvas to use for the results list
-   * @param value  the search value to use for filtering the students
+   * @param manager the manager to use for getting the students and adding the
+   *                buttons to the results list
+   * @param value   the search value to use for filtering the students
    */
   public void setStudents(Manager manager, String value) {
     // Remove all the buttons

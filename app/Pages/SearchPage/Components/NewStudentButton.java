@@ -3,19 +3,20 @@ package Pages.SearchPage.Components;
 import javax.swing.JOptionPane;
 
 import Components.Button;
-import Pages.SearchPage.SearchPage;
+import Pages.Manager;
 
 /**
  * A class for creating buttons.
  */
 public class NewStudentButton extends Button {
     /**
-     * Constructs a new NewStudent object and sets its bounds to the specified
-     * location and size.
+     * Constructs a new NewStudentButton object and adds it to the search page
+     * canvas.
      *
-     * @param canvas the canvas to add the button to
+     * @param manager the manager to use for adding the button to the search page
+     *                canvas
      */
-    public NewStudentButton(SearchPage searchPage) {
+    public NewStudentButton(Manager manager) {
         // Create the button
         super("New Student", 0, 250);
 
@@ -32,7 +33,7 @@ public class NewStudentButton extends Button {
         });
 
         // Add the button to the canvas
-        searchPage.add(this);
+        manager.searchPage.add(this);
     }
 
     /**

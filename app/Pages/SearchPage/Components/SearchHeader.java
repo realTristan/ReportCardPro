@@ -10,10 +10,11 @@ import Pages.Manager;
  */
 public class SearchHeader extends Text {
   /**
-   * Constructs a new SearchHeader object and sets its bounds to the specified
-   * location and size.
+   * Constructs a new SearchHeader object and adds it to the search page canvas at
+   * the specified location and size.
    *
-   * @param p the canvas to add the header to
+   * @param manager the manager to use for adding the header to the search page
+   *                canvas
    */
   public SearchHeader(Manager manager) {
     // Create the label
@@ -23,7 +24,7 @@ public class SearchHeader extends Text {
     // Set the label font
     Font font = new Font("Arial", Font.PLAIN, 15);
     super.setFont(font);
-    
+
     // Add the label to the canvas
     manager.searchPage.add(this);
   }

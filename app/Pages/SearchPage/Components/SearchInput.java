@@ -10,10 +10,11 @@ import Pages.Manager;
  */
 public class SearchInput extends Input {
   /**
-   * Constructs a new SearchInput object and sets its bounds to the specified
-   * location and size.
+   * Constructs a new SearchInput object and adds it to the search page canvas at
+   * the specified location and size.
    *
-   * @param p the canvas to add the input to
+   * @param manager the manager to use for adding the input to the search page
+   *                canvas
    */
   public SearchInput(Manager manager) {
     super(100, 100);
@@ -29,10 +30,12 @@ public class SearchInput extends Input {
   }
 
   /**
-   * Sets the listener for the search input.
+   * Sets a document listener on the search input to update the results list when
+   * the input value changes.
    *
-   * @param p the canvas to use for the search input
-   * @param rl     the results list to use for the search input
+   * @param manager the manager to use for getting the students and updating the
+   *                results list
+   * @param rl      the results list to update when the input value changes
    */
   public void setListener(Manager manager, ResultsList rl) {
     // Create a reference to the search input

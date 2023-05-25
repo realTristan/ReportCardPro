@@ -6,14 +6,15 @@ import Components.Text;
 import Pages.Manager;
 
 /**
- * A class for creating text headers.
+ * A class for creating the main header
  */
 public class MainHeader extends Text {
   /**
-   * Constructs a new MainHeader object and sets its bounds to the specified
-   * location and size.
+   * Constructs a new MainHeader object and adds it to the search page canvas at
+   * the specified location and size.
    *
-   * @param p the canvas to add the header to
+   * @param manager the manager to use for adding the header to the search page
+   *                canvas
    */
   public MainHeader(Manager manager) {
     // Create the label

@@ -16,7 +16,7 @@ class Main {
     // Initialize the cache
     Cache cache = new Cache();
 
-    // Init manager
+    // Init page manager
     new Manager(frame, cache);
 
     // Set the UI Parameters

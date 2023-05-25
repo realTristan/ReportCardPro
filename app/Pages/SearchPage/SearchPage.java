@@ -18,8 +18,6 @@ import Pages.SearchPage.Components.SearchInput;
 public class SearchPage extends JPanel {
 	/**
 	 * Constructs a new SearchPage object.
-	 *
-	 * @param cache the cache to use for the search page
 	 */
 	public SearchPage() {
 		super();
@@ -46,7 +44,11 @@ public class SearchPage extends JPanel {
 		si.setListener(manager, rl);
 	}
 
-	// Paint components
+	/**
+	 * Paints the components on the canvas.
+	 *
+	 * @param g the graphics object to use for painting
+	 */
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 	}
