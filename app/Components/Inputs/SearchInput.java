@@ -1,5 +1,6 @@
 package Components.Inputs;
 
+import javax.swing.Box;
 import javax.swing.event.DocumentEvent;
 
 import Components.Canvas;
@@ -18,7 +19,10 @@ public class SearchInput extends Input {
    * @param y      the y-coordinate of the input
    */
   public SearchInput(Canvas canvas, int x, int y) {
-    super(x, y, 150, 30);
+    super();
+    super.setPlaceholder("Search for student");
+    super.setSize(150, 30);
+    canvas.add(Box.createHorizontalGlue());
     canvas.add(this);
   }
 

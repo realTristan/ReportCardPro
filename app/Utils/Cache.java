@@ -34,14 +34,31 @@ public class Cache {
   }
 
   /**
+   * Returns a list of all the students in the cache.
+   *
+   * @return a list of JSONObjects representing the students
+   */
+  public List<JSONObject> allStudents() {
+    // Create a new array
+      List<JSONObject> res = new ArrayList<JSONObject>();
+
+      // Iterate over the cache and add all the students
+      for (Object key : students.keySet()) {
+        res.add((JSONObject) students.get(key));
+      }
+      return res;
+  }
+
+  /**
    * Returns a list of students whose name starts with the given value.
    *
    * @param value the value to search for in the student names
    * @return a list of JSONObjects representing the matching students
    */
   public List<JSONObject> getStudents(String value) {
+    // Return all the students if the value is empty
     if (value.length() == 0) {
-      return new ArrayList<JSONObject>();
+      return this.allStudents();
     }
 
     // Create a dynamic array
@@ -53,7 +70,7 @@ public class Cache {
       JSONObject student = (JSONObject) students.get(key);
 
       // Get the students name
-      String name = (String) student.get("name");
+      String name = (String) student.get("last_name");
 
       // Check if the name contains the value
       if (name.toLowerCase().startsWith(value.toLowerCase())) {
@@ -64,4 +81,5 @@ public class Cache {
     // Return the results
     return res;
   }
+
 }

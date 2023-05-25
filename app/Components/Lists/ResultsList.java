@@ -28,6 +28,7 @@ public class ResultsList {
   public ResultsList(Canvas canvas, int x, int y, int w, int h) {
     pane = new JScrollPane();
     pane.setBounds(x, y, w, h);
+    this.setStudents(canvas, "");
     canvas.add(pane);
   }
 
@@ -44,13 +45,17 @@ public class ResultsList {
     List<JSONObject> students = canvas.cache.getStudents(value);
 
     // Iterate over the students
+    int sep = 0;
     for (JSONObject student : students) {
       // Get the students name
       String name = (String) student.get("last_name");
 
       // Create the button
-      Button button = new Button(name, 0, 0, 300, 30);
+      Button button = new Button(name, 0, sep, 300, 30);
       pane.add(button);
+
+      // Increment the separator
+      sep += 30;
     }
     pane.repaint();
   }

@@ -15,7 +15,9 @@ public class SubjectInput extends Input {
    * @param y      the y-coordinate of the input
    */
   public SubjectInput(Canvas canvas, int x, int y) {
-    super(x, y, 150, 30);
+    super();
+    super.setBounds(x, y, 150, 30);
+    super.setPlaceholder("Subject");
     canvas.add(this);
   }
 }
