@@ -6,20 +6,17 @@ import Pages.StudentPage.StudentPage.Panel;
 /**
  * A class for creating buttons.
  */
-public class SubjectButton extends Button {
+public class SaveButton extends Button {
   /**
-   * Constructs a new SubjectButton object and sets its bounds to the specified
+   * Constructs a new SaveButton object and sets its bounds to the specified
    * location and size.
    *
    * @param panel the manager to use for adding the button to the canvas
    * @param x the x-coordinate of the button
    * @param y the y-coordinate of the button
    */
-  public SubjectButton (Panel panel) {
-    super("Add Subject", 10, 10);
-
-    // Set the button size
-    super.setSize(150, 30);
+  public SaveButton (Panel panel) {
+    super("Save Changes", 0, 0);
 
     // Add the button to the canvas
     panel.add(this);

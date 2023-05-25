@@ -16,11 +16,11 @@ public class StudentButton extends Button {
      * @param s       the text to display on the button
      * @param ysep    the y-coordinate of the button
      */
-    public StudentButton(Manager manager, String s, int ysep) {
+    public StudentButton(Manager manager, String s, String id, int ysep) {
         super(s, 0, ysep);
         super.setSize(300, 30);
 
         // On button click, open the student page
-        super.addActionListener(e -> manager.openStudentPage());
+        super.addActionListener(e -> manager.openStudentPage(id));
     }
 }

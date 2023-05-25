@@ -53,8 +53,8 @@ public class Manager {
     /**
      * Adds the student page to the content pane.
      */
-    public void openStudentPage() {
-        this.studentPage = new StudentPage();
+    public void openStudentPage(String id) {
+        this.studentPage = new StudentPage(id);
         this.studentPage.setContent();
     }
 }

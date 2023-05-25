@@ -51,8 +51,11 @@ public class ResultsList extends JScrollPane {
       String first_name = (String) student.get("first_name");
       String full_name = last_name + ", " + first_name;
 
+      // Get the students id
+      String id = (String) student.get("id");
+
       // Create the button
-      StudentButton button = new StudentButton(manager, full_name, ysep);
+      StudentButton button = new StudentButton(manager, full_name, id, ysep);
       super.add(button);
 
       // Increment the separator

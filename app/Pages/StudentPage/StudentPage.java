@@ -19,12 +19,12 @@ public class StudentPage extends JFrame {
    * Constructs a new StudentPage object.
    *
    */
-  public StudentPage() {
+  public StudentPage(String id) {
     super();
     super.setBackground(Color.WHITE);
 
     // Set the frame properties
-    this.frame = new JFrame("Report Card Pro");
+    this.frame = new JFrame("Student: " + id);
     this.frame.setSize(400, 400);
     this.frame.setLayout(null);
     this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -52,15 +52,25 @@ public class StudentPage extends JFrame {
     public Panel() {
       super();
 
-      // Make the import grades and new subject buttons
-      new SubjectButton(this);
-      // new StudentIDHeader(manager, id);
+      // Main Header
+      new MainHeader(this);
 
-      // Make the new subject input
-      new SubjectInput(this, 10, 60);
-      new SubjectInput(this, 10, 90);
-      new SubjectInput(this, 10, 120);
-      new SubjectInput(this, 10, 150);
+      // Inputs array
+      SubjectInput[] subjectInputs = new SubjectInput[4];
+      GradeInput[] gradeInputs = new GradeInput[4];
+
+      // Add the inputs to the canvas
+      for (int i = 0; i < 4; i++) {
+        // Create the subject input
+        subjectInputs[i] = new SubjectInput(this, 10, 60 + (i * 30));
+
+        // Create the grade input
+        gradeInputs[i] = new GradeInput(this);
+      }
+
+      // Make the add new subject button
+      new SaveButton(this);
+      // new StudentIDHeader(manager, id);
     }
 
     /**
