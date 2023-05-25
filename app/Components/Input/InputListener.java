@@ -1,4 +1,4 @@
-package Components;
+package Components.Input;
 
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;

@@ -1,4 +1,4 @@
-package Components;
+package Components.Text;
 
 import javax.swing.JLabel;
 

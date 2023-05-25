@@ -1,6 +1,6 @@
 package Pages.StudentPage.Components;
 
-import Components.Input;
+import Components.Input.Input;
 import Pages.StudentPage.StudentPage.Panel;
 
 /**

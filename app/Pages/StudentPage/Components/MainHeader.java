@@ -2,7 +2,7 @@ package Pages.StudentPage.Components;
 
 import java.awt.Font;
 
-import Components.Text;
+import Components.Text.Text;
 import Pages.StudentPage.StudentPage.Panel;
 
 /**

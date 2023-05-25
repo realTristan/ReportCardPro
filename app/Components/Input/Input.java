@@ -1,8 +1,10 @@
-package Components;
+package Components.Input;
 
 import java.awt.Color;
 
 import javax.swing.JTextField;
+
+import Components.Text.PlaceholderListener;
 
 /**
  * A class for creating input fields.

@@ -2,8 +2,8 @@ package Pages.SearchPage.Components;
 
 import javax.swing.event.DocumentEvent;
 
-import Components.Input;
-import Components.InputListener;
+import Components.Input.Input;
+import Components.Input.InputListener;
 import Pages.Manager;
 import Pages.SearchPage.Components.ResultList.ResultsList;
 
