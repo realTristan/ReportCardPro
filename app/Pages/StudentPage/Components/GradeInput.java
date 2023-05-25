@@ -17,9 +17,6 @@ public class GradeInput extends Input {
     // Create the input
     super(0, 0, 5);
 
-    // Set the input size
-    super.setSize(150, 30);
-
     // Set the placeholder text for the input
     super.setPlaceholder("Grade");
 

@@ -84,7 +84,12 @@ public class StudentCache {
     return res;
   }
 
-  // Update the student
+  /**
+   * Returns the student with the given id.
+   *
+   * @param id the id of the student
+   * @return a JSONObject representing the student
+   */
   public void updateStudentCourses(String id, List<Map<String, Object>> subjects) {
     // Get the student
     JSONObject student = (JSONObject) students.get(id);
@@ -97,7 +102,12 @@ public class StudentCache {
     export();
   }
 
-  // Get student courses
+  /**
+   * Returns a list of courses for the given student.
+   *
+   * @param id the id of the student
+   * @return a list of courses
+   */
   public List<Map<String, Object>> getStudentCourses(String id) {
     // Get the student
     JSONObject student = (JSONObject) students.get(id);
@@ -105,5 +115,4 @@ public class StudentCache {
     // Return the courses
     return (List<Map<String, Object>>) student.get("courses");
   }
-
 }

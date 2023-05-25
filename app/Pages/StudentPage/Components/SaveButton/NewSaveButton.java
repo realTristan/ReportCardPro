@@ -1,17 +1,17 @@
-package Pages.StudentPage.Components.SaveButtons;
+package Pages.StudentPage.Components.SaveButton;
 
 import java.util.List;
 import java.util.Map;
 
 import Pages.Manager;
-import Pages.StudentPage.Components.CourseInput;
+import Pages.StudentPage.Components.SubjectInput;
 import Pages.StudentPage.Components.GradeInput;
 import Pages.StudentPage.StudentPage.Panel;
 
 /**
  * A class for the save button.
  */
-public class SaveButtonList {
+public class NewSaveButton {
 	/**
 	 * Constructs a new SaveButtonList object.
 	 *
@@ -19,9 +19,9 @@ public class SaveButtonList {
 	 * @param manager the manager to use for the student page
 	 * @param id      the id of the student
 	 */
-	public SaveButtonList(Panel panel, Manager manager, String id) {
+	public NewSaveButton(Panel panel, Manager manager, String id) {
 		// Inputs array
-		CourseInput[] courseInputs = new CourseInput[4];
+		SubjectInput[] subjectInputs = new SubjectInput[4];
 		GradeInput[] gradeInputs = new GradeInput[4];
 
 		// Get the student courses
@@ -31,7 +31,7 @@ public class SaveButtonList {
 		for (int i = 0; i < courses.size(); i++) {
 			// Create the course input
 			String subject = this.getCourseSubject(courses, i);
-			courseInputs[i] = new CourseInput(panel, 10, 60 + (i * 30), subject);
+			subjectInputs[i] = new SubjectInput(panel, subject);
 
 			// Create the grade input
 			String grade = this.getCourseGrade(courses, i);
@@ -39,7 +39,7 @@ public class SaveButtonList {
 		}
 
 		// Make the add new subject button
-		new SaveButton(manager, panel, id, courseInputs, gradeInputs);
+		new SaveButton(manager, panel, id, subjectInputs, gradeInputs);
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class SaveButtonList {
 	 * @param i       the index
 	 * @return the course subject
 	 */
-	public String getCourseSubject(List<Map<String, Object>> courses, int i) {
+	private String getCourseSubject(List<Map<String, Object>> courses, int i) {
 		return (String) courses.get(i).get("subject");
 	}
 
@@ -60,7 +60,11 @@ public class SaveButtonList {
 	 * @param i       the index
 	 * @return the course grade
 	 */
-	public String getCourseGrade(List<Map<String, Object>> courses, int i) {
-		return (String) courses.get(i).get("grade");
+	private String getCourseGrade(List<Map<String, Object>> courses, int i) {
+		// Get the double grade
+		double grade = (double) courses.get(i).get("grade");
+
+		// Convert the double grade to a string
+		return Double.toString(grade);
 	}
 }

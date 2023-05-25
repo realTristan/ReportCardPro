@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 import Pages.Manager;
 import Pages.StudentPage.Components.*;
-import Pages.StudentPage.Components.SaveButtons.SaveButtonList;
+import Pages.StudentPage.Components.SaveButton.NewSaveButton;
 
 /**
  * A class for creating student pages.
@@ -69,7 +69,7 @@ public class StudentPage extends JFrame {
       new MainHeader(this);
 
       // Add the save button
-      new SaveButtonList(this, manager, id);
+      new NewSaveButton(this, manager, id);
     }
 
     /**

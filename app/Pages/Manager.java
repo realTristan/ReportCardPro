@@ -44,7 +44,7 @@ public class Manager {
     /**
      * Removes the search page from the content pane.
      */
-    public void setSearchPage() {
+    private void setSearchPage() {
         this.searchPage = new SearchPage();
         this.searchPage.setContent(this);
         this.frame.setContentPane(this.searchPage);

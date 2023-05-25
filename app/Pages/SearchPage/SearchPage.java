@@ -9,8 +9,8 @@ import Pages.Manager;
 import Pages.SearchPage.Components.Footer;
 import Pages.SearchPage.Components.MainHeader;
 import Pages.SearchPage.Components.SearchHeader;
-import Pages.SearchPage.Components.SearchInput;
-import Pages.SearchPage.Components.ResultList.ResultsList;
+import Pages.SearchPage.Components.Search.ScrollPane;
+import Pages.SearchPage.Components.Search.SearchInput;
 
 /**
  * A class for creating search pages.
@@ -36,7 +36,7 @@ public class SearchPage extends JPanel {
 		new Footer(manager);
 
 		// Search Bar
-		ResultsList rl = new ResultsList(manager);
+		ScrollPane rl = new ScrollPane(manager);
 		rl.setSize(300, 150);
 		SearchInput si = new SearchInput(manager);
 

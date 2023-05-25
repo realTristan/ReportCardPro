@@ -1,11 +1,10 @@
-package Pages.SearchPage.Components;
+package Pages.SearchPage.Components.Search;
 
 import javax.swing.event.DocumentEvent;
 
 import Components.Input.Input;
 import Components.Input.InputListener;
 import Pages.Manager;
-import Pages.SearchPage.Components.ResultList.ResultsList;
 
 /**
  * A class for creating search inputs.
@@ -39,7 +38,7 @@ public class SearchInput extends Input {
    *                results list
    * @param rl      the results list to update when the input value changes
    */
-  public void setListener(Manager manager, ResultsList rl) {
+  public void setListener(Manager manager, ScrollPane rl) {
     // Create a reference to the search input
     SearchInput searchInput = this;
 

@@ -1,4 +1,4 @@
-package Pages.SearchPage.Components;
+package Pages.SearchPage.Components.Search;
 
 import Components.Button;
 import Pages.Manager;

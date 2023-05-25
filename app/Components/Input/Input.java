@@ -1,7 +1,5 @@
 package Components.Input;
 
-import java.awt.Color;
-
 import javax.swing.JTextField;
 
 import Components.Text.PlaceholderListener;
@@ -39,6 +37,6 @@ public class Input extends JTextField {
 
     // Set the text
     super.setText(placeholder);
-    super.setForeground(Color.GRAY);
+    // super.setForeground(Color.GRAY);
   }
 }

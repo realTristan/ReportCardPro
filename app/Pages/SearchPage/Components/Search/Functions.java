@@ -1,16 +1,15 @@
-package Pages.SearchPage.Components.ResultList;
+package Pages.SearchPage.Components.Search;
 
 import java.util.List;
 
 import org.json.simple.JSONObject;
 
 import Pages.Manager;
-import Pages.SearchPage.Components.StudentButton;
 
 /**
  * A class for managing the students in the results list.
  */
-public class Students {
+public class Functions {
   /**
    * Sets the students in the results list based on the given search value.
    *
@@ -18,7 +17,7 @@ public class Students {
    *                buttons to the results list
    * @param value   the search value to use for filtering the students
    */
-  public static void updateStudentList(ResultsList list, Manager manager, String value) {
+  public static void updateStudentList(ScrollPane list, Manager manager, String value) {
     // Remove all the buttons
     list.removeAll();
 
@@ -29,12 +28,12 @@ public class Students {
     int ysep = 0;
     for (JSONObject student : students) {
       // Get the students name
-      String first = Students.getFirstName(student);
-      String last = Students.getLastName(student);
-      String fullName = Students.toFullName(first, last);
+      String first = Functions.getFirstName(student);
+      String last = Functions.getLastName(student);
+      String fullName = Functions.toFullName(first, last);
 
       // Get the students id
-      String id = Students.getId(student);
+      String id = Functions.getId(student);
 
       // Create the button
       StudentButton button = new StudentButton(manager, fullName, id, ysep);

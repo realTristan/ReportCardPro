@@ -1,4 +1,4 @@
-package Pages.StudentPage.Components.SaveButtons;
+package Pages.StudentPage.Components.SaveButton;
 
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import Pages.Manager;
-import Pages.StudentPage.Components.CourseInput;
+import Pages.StudentPage.Components.SubjectInput;
 import Pages.StudentPage.Components.GradeInput;
 
 /**
@@ -22,7 +22,7 @@ public class Listener {
    * @param subjectInputs the subject inputs
    * @param gradeInputs   the grade inputs
    */
-  public static void onClick(Manager manager, String id, CourseInput[] subjectInputs, GradeInput[] gradeInputs) {
+  public static void onClick(Manager manager, String id, SubjectInput[] subjectInputs, GradeInput[] gradeInputs) {
     // Get the courses
     List<Map<String, Object>> courses = Listener.mergeToMapList(subjectInputs, gradeInputs);
 
@@ -47,7 +47,7 @@ public class Listener {
    * @param gradeInputs   the grade inputs
    * @return the array of objects
    */
-  public static List<Map<String, Object>> mergeToMapList(CourseInput[] subjectInputs, GradeInput[] gradeInputs) {
+  private static List<Map<String, Object>> mergeToMapList(SubjectInput[] subjectInputs, GradeInput[] gradeInputs) {
     // Add them to an array
     List<Map<String, Object>> courses = new ArrayList<>();
 
@@ -62,11 +62,25 @@ public class Listener {
       // Create the subject object
       Map<String, Object> obj = new HashMap<String, Object>();
       obj.put("subject", subject);
-      obj.put("grade", grade);
+      obj.put("grade", toDouble(grade));
 
       // Add the subject object to the array
       courses.add(obj);
     }
     return courses;
+  }
+
+  /**
+   * Converts a string to a double.
+   *
+   * @param v the string
+   * @return the double
+   */
+  private static double toDouble(String v) {
+      try {
+        return Double.parseDouble(v);
+      } catch (NumberFormatException e) {
+        return 0;
+      }
   }
 }
