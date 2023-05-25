@@ -28,11 +28,9 @@ public class StudentPage extends JFrame {
     // Local variables
     this.id = id;
     this.frame = new JFrame(id);
-    this.frame.setSize(400, 400);
-    this.frame.setLayout(null);
+    this.frame.setSize(300, 250);
     this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     this.frame.setVisible(true);
-    this.frame.setResizable(false);
   }
 
   /**
