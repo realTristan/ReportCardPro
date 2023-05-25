@@ -6,8 +6,7 @@ import javax.swing.JScrollPane;
 
 import org.json.simple.JSONObject;
 
-import Components.Button;
-import Pages.SearchPage.SearchPage;
+import Pages.Manager;
 
 /**
  * A class representing a list of results.
@@ -17,38 +16,36 @@ public class ResultsList extends JScrollPane {
    * Constructs a new ResultsList object and adds it to the given canvas at the
    * specified location and size.
    *
-   * @param searchPage the canvas to add the results list to
-   * @param x      the x-coordinate of the results list
-   * @param y      the y-coordinate of the results list
+   * @param p the canvas to add the results list to
    */
-  public ResultsList(SearchPage searchPage) {
+  public ResultsList(Manager manager) {
     super();
 
     // Set the location of the results list
-    super.setLocation(searchPage.center - 150, 150);
+    super.setLocation(150, 150);
 
     // Set the students
-    // this.setStudents(searchPage, "");
+    this.setStudents(manager, "");
 
     // Add the results list to the canvas
-    searchPage.add(this);
+    manager.searchPage.add(this);
   }
 
   /**
    * Sets the students in the results list based on the given search value.
    *
-   * @param searchPage the canvas to use for the results list
+   * @param p the canvas to use for the results list
    * @param value  the search value to use for filtering the students
    */
-  public void setStudents(SearchPage searchPage, String value) {
-    System.out.println(value);
+  public void setStudents(Manager manager, String value) {
+    // Remove all the buttons
     super.removeAll();
 
     // Get the students
-    List<JSONObject> students = searchPage.cache.getStudents(value);
+    List<JSONObject> students = manager.cache.getStudents(value);
 
     // Iterate over the students
-    int sep = 0;
+    int ysep = 0;
     for (JSONObject student : students) {
       // Get the students name
       String last_name = (String) student.get("last_name");
@@ -56,12 +53,11 @@ public class ResultsList extends JScrollPane {
       String full_name = last_name + ", " + first_name;
 
       // Create the button
-      Button button = new Button(full_name, 0, sep);
-      button.setSize(300, 30);
+      StudentButton button = new StudentButton(manager, full_name, ysep);
       super.add(button);
 
       // Increment the separator
-      sep += 30;
+      ysep += 30;
     }
 
     // Update the results list

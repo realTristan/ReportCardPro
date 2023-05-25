@@ -3,7 +3,7 @@ package Pages.SearchPage.Components;
 import javax.swing.event.DocumentEvent;
 
 import Components.Input;
-import Pages.SearchPage.SearchPage;
+import Pages.Manager;
 
 /**
  * A class for creating search inputs.
@@ -13,10 +13,10 @@ public class SearchInput extends Input {
    * Constructs a new SearchInput object and sets its bounds to the specified
    * location and size.
    *
-   * @param searchPage the canvas to add the input to
+   * @param p the canvas to add the input to
    */
-  public SearchInput(SearchPage searchPage) {
-    super(searchPage.center - 1, 100);
+  public SearchInput(Manager manager) {
+    super(100, 100);
 
     // Set the placeholder text for the input
     super.setPlaceholder("Search for student");
@@ -25,16 +25,16 @@ public class SearchInput extends Input {
     super.setSize(200, 30);
 
     // Add the input to the canvas
-    searchPage.add(this);
+    manager.searchPage.add(this);
   }
 
   /**
    * Sets the listener for the search input.
    *
-   * @param searchPage the canvas to use for the search input
+   * @param p the canvas to use for the search input
    * @param rl     the results list to use for the search input
    */
-  public void setListener(SearchPage searchPage, ResultsList rl) {
+  public void setListener(Manager manager, ResultsList rl) {
     // Create a reference to the search input
     SearchInput searchInput = this;
 
@@ -47,7 +47,7 @@ public class SearchInput extends Input {
         String value = searchInput.getText();
 
         // Update the results list
-        rl.setStudents(searchPage, value);
+        rl.setStudents(manager, value);
       }
     });
   }

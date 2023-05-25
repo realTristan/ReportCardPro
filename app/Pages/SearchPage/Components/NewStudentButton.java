@@ -15,7 +15,7 @@ public class NewStudentButton extends Button {
      *
      * @param canvas the canvas to add the button to
      */
-    public NewStudentButton(SearchPage p) {
+    public NewStudentButton(SearchPage searchPage) {
         // Create the button
         super("New Student", 0, 250);
 
@@ -32,7 +32,7 @@ public class NewStudentButton extends Button {
         });
 
         // Add the button to the canvas
-        p.add(this);
+        searchPage.add(this);
     }
 
     /**

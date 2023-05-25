@@ -1,7 +1,7 @@
 package Pages.StudentPage.Components;
 
 import Components.Button;
-import Pages.StudentPage.StudentPage;
+import Pages.Manager;
 
 /**
  * A class for creating back buttons.
@@ -13,7 +13,7 @@ public class BackButton extends Button {
      *
      * @param canvas the canvas to add the button to
      */
-    public BackButton(StudentPage p) {
+    public BackButton(Manager manager) {
         // Create the button
         super("Back", 20, 250);
 
@@ -22,9 +22,10 @@ public class BackButton extends Button {
 
         // Add the action listener
         super.addActionListener(e -> {
+            manager.toSearchPage();
         });
 
         // Add the button to the canvas
-        p.add(this);
+        manager.studentPage.add(this);
     }
 }

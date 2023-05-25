@@ -1,8 +1,9 @@
-package Components;
+package Pages.SearchPage.Components;
 
 import java.awt.Font;
 
-import Pages.SearchPage.SearchPage;
+import Components.Text;
+import Pages.Manager;
 
 /**
  * A class for creating text headers.
@@ -14,7 +15,7 @@ public class Footer extends Text {
    *
    * @param searchPage the canvas to add the header to
    */
-  public Footer(SearchPage searchPage) {
+  public Footer(Manager manager) {
     // Create the label
     super("v1.0.0 made by Tristan, Jagger, Jett", 198, 330);
     super.setSize(300, 30);
@@ -24,6 +25,6 @@ public class Footer extends Text {
     super.setFont(font);
 
     // Add the label to the canvas
-    searchPage.add(this);
+    manager.searchPage.add(this);
   }
 }
