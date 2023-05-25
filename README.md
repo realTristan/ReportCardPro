@@ -7,6 +7,7 @@
 3. Add/Remove Courses
 4. Set Course Grades
 5. Update Cache Functions
+6. Be able to make a .png with all of the students grades
 
 # License 
 MIT License
