@@ -22,6 +22,5 @@ class Main {
     frame.setLayout(null);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setVisible(true);
-    frame.setResizable(false);
   }
 }
