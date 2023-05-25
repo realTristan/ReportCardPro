@@ -17,7 +17,7 @@ public class SearchInput extends Input {
    *                canvas
    */
   public SearchInput(Manager manager) {
-    super(100, 100);
+    super(100, 100, 15);
 
     // Set the placeholder text for the input
     super.setPlaceholder("Search for student");

@@ -21,9 +21,7 @@ public class BackButton extends Button {
         super.setSize(120, 30);
 
         // Add the action listener
-        super.addActionListener(e -> {
-            manager.toSearchPage();
-        });
+        super.addActionListener(e -> manager.toSearchPage());
 
         // Add the button to the canvas
         manager.studentPage.add(this);

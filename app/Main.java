@@ -1,5 +1,3 @@
-import java.awt.BorderLayout;
-
 import javax.swing.JFrame;
 
 import Pages.Manager;
@@ -21,7 +19,7 @@ class Main {
 
     // Set the UI Parameters
     frame.setSize(400, 400);
-    frame.setLayout(new BorderLayout());
+    frame.setLayout(null);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setVisible(true);
     frame.setResizable(false);

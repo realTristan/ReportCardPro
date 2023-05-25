@@ -21,8 +21,6 @@ public class StudentButton extends Button {
         super.setSize(300, 30);
 
         // On button click, open the student page
-        super.addActionListener(e -> {
-            manager.toStudentPage();
-        });
+        super.addActionListener(e -> manager.toStudentPage());
     }
 }

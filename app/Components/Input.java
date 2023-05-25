@@ -1,5 +1,7 @@
 package Components;
 
+import java.awt.Color;
+
 import javax.swing.JTextField;
 
 /**
@@ -13,8 +15,8 @@ public class Input extends JTextField {
    * @param x the x-coordinate of the input
    * @param y the y-coordinate of the input
    */
-  public Input(int x, int y) {
-    super();
+  public Input(int x, int y, int columns) {
+    super(columns);
     super.setLocation(x, y);
   }
 
@@ -32,5 +34,9 @@ public class Input extends JTextField {
 
     // Add the listener to the input
     super.addFocusListener(listener);
+
+    // Set the text
+    super.setText(placeholder);
+    super.setForeground(Color.GRAY);
   }
 }

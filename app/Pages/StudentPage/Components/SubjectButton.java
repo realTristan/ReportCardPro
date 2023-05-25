@@ -15,8 +15,8 @@ public class SubjectButton extends Button {
    * @param x the x-coordinate of the button
    * @param y the y-coordinate of the button
    */
-  public SubjectButton (Manager manager, int x, int y) {
-    super("Add Subject", x, y);
+  public SubjectButton (Manager manager) {
+    super("Add Subject", 10, 10);
 
     // Set the button size
     super.setSize(150, 30);

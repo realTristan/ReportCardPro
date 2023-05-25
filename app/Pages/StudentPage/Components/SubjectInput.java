@@ -15,10 +15,10 @@ public class SubjectInput extends Input {
  * @param y the y-coordinate of the input
  */
   public SubjectInput(Manager manager, int x, int y) {
-    super(x, y);
-
+    super(x, y, 15);
+    
     // Set the bounds of the input
-    super.setBounds(x, y, 150, 30);
+    super.setSize(150, 30);
 
     // Set the placeholder text for the input
     super.setPlaceholder("Subject");

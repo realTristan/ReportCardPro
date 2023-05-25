@@ -6,8 +6,7 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 import Pages.Manager;
-import Pages.StudentPage.Components.SubjectButton;
-import Pages.StudentPage.Components.SubjectInput;
+import Pages.StudentPage.Components.*;
 
 /**
  * A class for creating student pages.
@@ -29,7 +28,8 @@ public class StudentPage extends JPanel {
    */
   public void setContent(Manager manager) {
     // Make the import grades and new subject buttons
-    new SubjectButton(manager, 10, 10);
+    new SubjectButton(manager);
+    // new StudentIDHeader(manager, id);
 
     // Make the new subject input
     new SubjectInput(manager, 10, 60);
