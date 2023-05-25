@@ -5,20 +5,16 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * A class for storing student data
+ * A class for encoding data.
  */
-public class Student {
-    public Student() {
-
-    }
-
+public class Encoding {
     /**
-     * Generates a new ID for a student.
-     * 
-     * @return the new ID
-     * @throws NoSuchAlgorithmException
+     * Returns the SHA-256 hash of the current time.
+     *
+     * @return the SHA-256 hash of the current time
      */
-    public String newID() throws NoSuchAlgorithmException {
+    public static String SHA256() throws NoSuchAlgorithmException {
+        // Get the current time in nanoseconds
         long time = Time.getNano();
 
         // Convert the time into astring

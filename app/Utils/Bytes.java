@@ -12,7 +12,7 @@ public class Bytes {
    */
   public static String toHex(byte[] b) {
     // Create a new StringBuffer
-    StringBuffer hexString = new StringBuffer();
+    StringBuffer buf = new StringBuffer();
 
     // Iterate over the bytes
     for (int i = 0; i < b.length; i++) {
@@ -21,13 +21,13 @@ public class Bytes {
 
       // If the hex value is only one character long, append a 0
       if (hex.length() == 1)
-        hexString.append('0');
+        buf.append('0');
 
       // Append the hex value to the string buffer
-      hexString.append(hex);
+      buf.append(hex);
     }
 
     // Return the string buffer
-    return hexString.toString();
+    return buf.toString();
   }
 }

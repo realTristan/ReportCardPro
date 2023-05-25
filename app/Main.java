@@ -2,7 +2,7 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 
-import Components.Canvas;
+import Pages.SearchPage;
 import Utils.Cache;
 
 /**
@@ -17,8 +17,14 @@ class Main {
     Cache cache = new Cache();
 
     // Establish Canvas
-    Canvas content = new Canvas(cache);
+    SearchPage content = new SearchPage(window, cache);
     window.setContentPane(content);
+
+    /*
+    JSONObject student = (JSONObject) cache.students.get("123456789");
+    StudentPage content2 = new StudentPage(window, cache, student);
+    window.setContentPane(content2);
+    */
 
     // Set the UI Parameters
     window.setSize(400, 400);

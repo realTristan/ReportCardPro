@@ -4,17 +4,18 @@ import javax.swing.JOptionPane;
 
 import Components.Canvas;
 
+
 /**
  * A class for creating buttons.
  */
-public class NewStudent extends Button {
+public class NewStudentButton extends Button {
     /**
      * Constructs a new NewStudent object and sets its bounds to the specified
      * location and size.
      *
      * @param canvas the canvas to add the button to
      */
-    public NewStudent(Canvas canvas) {
+    public NewStudentButton(Canvas canvas) {
         // Create the button
         super("New Student", canvas.center - 60, 250);
 
