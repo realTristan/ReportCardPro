@@ -2,7 +2,6 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 
-import Components.Canvas;
 import Pages.SearchPage.SearchPage;
 import Pages.StudentPage.StudentPage;
 import Utils.Cache;
@@ -21,6 +20,9 @@ class Main {
     // Init pages
     SearchPage searchPage = new SearchPage(cache);
     StudentPage studentPage = new StudentPage();
+
+    // Set the content panes
+    window.setContentPane(searchPage);
 
     // Set the UI Parameters
     window.setSize(400, 400);

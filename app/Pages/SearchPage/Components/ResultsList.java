@@ -28,7 +28,7 @@ public class ResultsList extends JScrollPane {
     super.setLocation(searchPage.center - 150, 150);
 
     // Set the students
-    this.setStudents(searchPage, "");
+    // this.setStudents(searchPage, "");
 
     // Add the results list to the canvas
     searchPage.add(this);
@@ -41,6 +41,7 @@ public class ResultsList extends JScrollPane {
    * @param value  the search value to use for filtering the students
    */
   public void setStudents(SearchPage searchPage, String value) {
+    System.out.println(value);
     super.removeAll();
 
     // Get the students

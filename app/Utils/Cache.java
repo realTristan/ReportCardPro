@@ -58,7 +58,6 @@ public class Cache {
   public List<JSONObject> getStudents(String value) {
     // Return all the students if the value is empty
     if (value.length() == 0) {
-      System.out.println(value);
       return this.allStudents();
     }
 
