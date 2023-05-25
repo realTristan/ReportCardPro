@@ -20,7 +20,7 @@ public class SearchInput extends Input {
     super(canvas.center - 1, 100);
 
     // Set the placeholder text for the input
-    super.setPlaceholder("Search for student");
+    // super.setPlaceholder("Search for student");
 
     // Set the size of the input
     super.setSize(200, 30);
@@ -48,7 +48,9 @@ public class SearchInput extends Input {
         String value = searchInput.getText();
 
         // Update the results list
-        rl.setStudents(canvas, value);
+        if (value.length() > 0) {
+          rl.setStudents(canvas, value);
+        }
       }
     });
   }

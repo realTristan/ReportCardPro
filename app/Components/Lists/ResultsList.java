@@ -7,7 +7,7 @@ import javax.swing.JScrollPane;
 import org.json.simple.JSONObject;
 
 import Components.Canvas;
-import Components.Buttons.StudentButton;
+import Components.Buttons.Button;
 
 /**
  * A class representing a list of results.
@@ -47,18 +47,20 @@ public class ResultsList extends JScrollPane {
     List<JSONObject> students = canvas.cache.getStudents(value);
 
     // Iterate over the students
-    int ysep = 0;
+    int sep = 0;
     for (JSONObject student : students) {
       // Get the students name
-      String name = (String) student.get("last_name");
-      String id = (String) student.get("id");
+      String last_name = (String) student.get("last_name");
+      String first_name = (String) student.get("first_name");
+      String full_name = last_name + ", " + first_name;
 
       // Create the button
-      StudentButton button = new StudentButton(canvas, name, id, ysep);
+      Button button = new Button(full_name, 0, sep);
+      button.setSize(300, 30);
       super.add(button);
 
       // Increment the separator
-      ysep += 30;
+      sep += 30;
     }
 
     // Update the results list

@@ -1,4 +1,4 @@
-package Components.Headers;
+package Components.Text;
 
 import java.awt.Font;
 

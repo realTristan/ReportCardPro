@@ -4,7 +4,6 @@ import javax.swing.JOptionPane;
 
 import Components.Canvas;
 
-
 /**
  * A class for creating buttons.
  */

@@ -7,7 +7,7 @@ import java.time.Clock;
  */
 public class Time {
     /**
-     * Returns the current time in nanoseconds.
+     * Gets the current time in nanoseconds.
      *
      * @return the current time in nanoseconds
      */

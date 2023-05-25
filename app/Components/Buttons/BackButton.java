@@ -14,13 +14,19 @@ public class BackButton extends Button {
      */
     public BackButton(Canvas canvas) {
         // Create the button
-        super("Back", 10, 250);
+        super("Back", canvas.center - 60, 250);
 
         // Set the button size
         super.setSize(120, 30);
 
         // Add the action listener
-        super.addActionListener(e -> new Pages.SearchPage(canvas.frame, canvas.cache));
+        super.addActionListener(e -> {
+            // Remove all components from the canvas
+            canvas.removeAll();
+
+            // Move to the search page
+            new Pages.SearchPage(canvas);
+        });
 
         // Add the button to the canvas
         canvas.add(this);

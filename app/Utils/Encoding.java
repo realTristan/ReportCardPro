@@ -9,12 +9,11 @@ import java.security.NoSuchAlgorithmException;
  */
 public class Encoding {
     /**
-     * Returns the SHA-256 hash of the current time.
+     * Encodes the specified string using SHA-256.
      *
-     * @return the SHA-256 hash of the current time
+     * @return the encoded string
      */
-    public static String SHA256() throws NoSuchAlgorithmException {
-        // Get the current time in nanoseconds
+    public String SHA256() throws NoSuchAlgorithmException {
         long time = Time.getNano();
 
         // Convert the time into astring
