@@ -16,8 +16,6 @@ public class Button extends JButton {
    */
   public Button(String text, int x, int y) {
     super(text);
-
-    // Set the location of the button
     super.setLocation(x, y);
   }
 }

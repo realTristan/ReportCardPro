@@ -1,4 +1,4 @@
-package Pages.StudentPage.Components.SaveButton;
+package Pages.StudentPage.Components.StudentInfo;
 
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
@@ -23,11 +23,8 @@ public class Listener {
    * @param gradeInputs   the grade inputs
    */
   public static void onClick(Manager manager, String id, SubjectInput[] subjectInputs, GradeInput[] gradeInputs) {
-    // Get the courses
-    List<Map<String, Object>> courses = Listener.mergeToMapList(subjectInputs, gradeInputs);
-
-    // Update the student
-    manager.cache.updateStudentCourses(id, courses);
+    manager.cache.updateStudentCourses(id,
+        Listener.mergeToMapList(subjectInputs, gradeInputs));
   }
 
   /**
@@ -49,25 +46,21 @@ public class Listener {
    */
   private static List<Map<String, Object>> mergeToMapList(SubjectInput[] subjectInputs, GradeInput[] gradeInputs) {
     // Add them to an array
-    List<Map<String, Object>> courses = new ArrayList<>();
+    List<Map<String, Object>> res = new ArrayList<>();
 
     // Add the inputs to the array
     for (int i = 0; i < 4; i++) {
-      // Get the subject
+      // Get the subject and grade
       String subject = subjectInputs[i].getText();
-
-      // Get the grade
       String grade = gradeInputs[i].getText();
 
-      // Create the subject object
+      // Add them to the array
       Map<String, Object> obj = new HashMap<String, Object>();
       obj.put("subject", subject);
       obj.put("grade", toDouble(grade));
-
-      // Add the subject object to the array
-      courses.add(obj);
+      res.add(obj);
     }
-    return courses;
+    return res;
   }
 
   /**
@@ -77,10 +70,10 @@ public class Listener {
    * @return the double
    */
   private static double toDouble(String v) {
-      try {
-        return Double.parseDouble(v);
-      } catch (NumberFormatException e) {
-        return 0;
-      }
+    try {
+      return Double.parseDouble(v);
+    } catch (NumberFormatException e) {
+      return 0;
+    }
   }
 }

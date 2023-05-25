@@ -14,6 +14,7 @@ public class Encoding {
    * @return the encoded string
    */
   public static String SHA1() throws NoSuchAlgorithmException {
+    // Get the current time in nanoseconds
     long time = Time.getNano();
 
     // Convert the time into astring

@@ -7,7 +7,7 @@ import Pages.Manager;
 /**
  * A class representing a list of results.
  */
-public class ScrollPane extends JScrollPane {
+public class StudentScrollPane extends JScrollPane {
   /**
    * Constructs a new ResultsList object and adds it to the search page canvas at
    * the specified location.
@@ -15,7 +15,7 @@ public class ScrollPane extends JScrollPane {
    * @param manager the manager to use for adding the results list to the search
    *                page canvas
    */
-  public ScrollPane(Manager manager) {
+  public StudentScrollPane(Manager manager) {
     super();
 
     // Set the location of the results list
@@ -32,6 +32,6 @@ public class ScrollPane extends JScrollPane {
    * @param value   the value to use for filtering the students
    */
   public void updateStudentList(Manager manager, String value) {
-    Functions.updateStudentList(this, manager, value);
+    StudentButtonList.updateList(this, manager, value);
   }
 }

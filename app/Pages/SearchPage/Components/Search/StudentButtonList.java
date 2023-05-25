@@ -9,7 +9,7 @@ import Pages.Manager;
 /**
  * A class for managing the students in the results list.
  */
-public class Functions {
+public class StudentButtonList {
   /**
    * Sets the students in the results list based on the given search value.
    *
@@ -17,7 +17,7 @@ public class Functions {
    *                buttons to the results list
    * @param value   the search value to use for filtering the students
    */
-  public static void updateStudentList(ScrollPane list, Manager manager, String value) {
+  public static void updateList(StudentScrollPane list, Manager manager, String value) {
     // Remove all the buttons
     list.removeAll();
 
@@ -28,12 +28,12 @@ public class Functions {
     int ysep = 0;
     for (JSONObject student : students) {
       // Get the students name
-      String first = Functions.getFirstName(student);
-      String last = Functions.getLastName(student);
-      String fullName = Functions.toFullName(first, last);
+      String first = StudentButtonList.getFirstName(student);
+      String last = StudentButtonList.getLastName(student);
+      String fullName = StudentButtonList.toFullName(first, last);
 
       // Get the students id
-      String id = Functions.getId(student);
+      String id = StudentButtonList.getId(student);
 
       // Create the button
       StudentButton button = new StudentButton(manager, fullName, id, ysep);

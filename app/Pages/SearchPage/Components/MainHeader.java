@@ -17,7 +17,6 @@ public class MainHeader extends Text {
    *                canvas
    */
   public MainHeader(Manager manager) {
-    // Create the label
     super("Report Card Pro", 100, 20);
     super.setSize(300, 30);
 

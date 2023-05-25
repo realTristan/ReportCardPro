@@ -10,10 +10,7 @@ import Components.Input.Input;
  * A class for creating placeholder listeners.
  */
 public class PlaceholderListener implements FocusListener {
-    // Declare the input variable
     private Input input;
-
-    // Declare the placeholder variable
     private String placeholder;
 
     /**

@@ -17,7 +17,6 @@ public class Footer extends Text {
    *                canvas
    */
   public Footer(Manager manager) {
-    // Create the label
     super("v1.0.0 made by Tristan, Jagger, Jett", 198, 330);
     super.setSize(300, 30);
 

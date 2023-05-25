@@ -14,16 +14,9 @@ public class GradeInput extends Input {
    * @param panel the panel to use for adding the input to the canvas
    */
   public GradeInput(Panel panel, String grade) {
-    // Create the input
     super(0, 0, 5);
-
-    // Set the placeholder text for the input
     super.setPlaceholder("Grade");
-
-    // Set the text of the input
     super.setText(grade);
-
-    // Add the input to the canvas
     panel.add(this);
   }
 }

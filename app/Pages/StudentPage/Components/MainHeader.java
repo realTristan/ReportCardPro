@@ -16,14 +16,13 @@ public class MainHeader extends Text {
    * @param panel the panel to use for adding the header to the canvas
    */
   public MainHeader(Panel panel) {
-    // Create the label
     super("Report Card Pro", 0, 0);
 
-    // Set the label font
+    // Set the font
     Font font = new Font("Arial", Font.BOLD, 30);
     super.setFont(font);
 
-    // Add the label to the canvas
+    // Add the header to the panel
     panel.add(this);
   }
 }

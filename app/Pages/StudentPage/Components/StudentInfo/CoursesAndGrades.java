@@ -1,4 +1,4 @@
-package Pages.StudentPage.Components.SaveButton;
+package Pages.StudentPage.Components.StudentInfo;
 
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import Pages.StudentPage.StudentPage.Panel;
 /**
  * A class for the save button.
  */
-public class NewSaveButton {
+public class CoursesAndGrades {
 	/**
 	 * Constructs a new SaveButtonList object.
 	 *
@@ -19,11 +19,7 @@ public class NewSaveButton {
 	 * @param manager the manager to use for the student page
 	 * @param id      the id of the student
 	 */
-	public NewSaveButton(Panel panel, Manager manager, String id) {
-		// Inputs array
-		SubjectInput[] subjectInputs = new SubjectInput[4];
-		GradeInput[] gradeInputs = new GradeInput[4];
-
+	public CoursesAndGrades(Manager manager, Panel panel, String id, SubjectInput[] subjectInputs, GradeInput[] gradeInputs) {
 		// Get the student courses
 		List<Map<String, Object>> courses = manager.cache.getStudentCourses(id);
 
@@ -37,9 +33,6 @@ public class NewSaveButton {
 			String grade = this.getCourseGrade(courses, i);
 			gradeInputs[i] = new GradeInput(panel, grade);
 		}
-
-		// Make the add new subject button
-		new SaveButton(manager, panel, id, subjectInputs, gradeInputs);
 	}
 
 	/**
@@ -61,10 +54,6 @@ public class NewSaveButton {
 	 * @return the course grade
 	 */
 	private String getCourseGrade(List<Map<String, Object>> courses, int i) {
-		// Get the double grade
-		double grade = (double) courses.get(i).get("grade");
-
-		// Convert the double grade to a string
-		return Double.toString(grade);
+		return Double.toString((double) courses.get(i).get("grade"));
 	}
 }

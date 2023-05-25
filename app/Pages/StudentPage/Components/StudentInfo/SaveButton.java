@@ -1,4 +1,4 @@
-package Pages.StudentPage.Components.SaveButton;
+package Pages.StudentPage.Components.StudentInfo;
 
 import Components.Button;
 import Pages.Manager;
@@ -26,13 +26,9 @@ public class SaveButton extends Button {
 
     // Button click listener
     this.addActionListener(e -> {
-      // Check if the event is valid
-      if (!Listener.isValidEvent(e)) {
-        return;
+      if (Listener.isValidEvent(e)) {
+        Listener.onClick(manager, id, subjectInputs, gradeInputs);
       }
-
-      // Execute the button click listener
-      Listener.onClick(manager, id, subjectInputs, gradeInputs);
     });
   }
 }

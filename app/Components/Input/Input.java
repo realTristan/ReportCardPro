@@ -26,17 +26,11 @@ public class Input extends JTextField {
    * @param placeholder the placeholder text to use
    */
   public void setPlaceholder(String placeholder) {
-    // Create a reference to the input
-    Input input = this;
-
     // Create a listener for the input
-    PlaceholderListener listener = new PlaceholderListener(input, placeholder);
+    PlaceholderListener listener = new PlaceholderListener(this, placeholder);
 
     // Add the listener to the input
     super.addFocusListener(listener);
-
-    // Set the text
     super.setText(placeholder);
-    // super.setForeground(Color.GRAY);
   }
 }

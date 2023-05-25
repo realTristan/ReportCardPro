@@ -9,7 +9,7 @@ import Pages.Manager;
 import Pages.SearchPage.Components.Footer;
 import Pages.SearchPage.Components.MainHeader;
 import Pages.SearchPage.Components.SearchHeader;
-import Pages.SearchPage.Components.Search.ScrollPane;
+import Pages.SearchPage.Components.Search.StudentScrollPane;
 import Pages.SearchPage.Components.Search.SearchInput;
 
 /**
@@ -36,12 +36,12 @@ public class SearchPage extends JPanel {
 		new Footer(manager);
 
 		// Search Bar
-		ScrollPane rl = new ScrollPane(manager);
-		rl.setSize(300, 150);
-		SearchInput si = new SearchInput(manager);
+		StudentScrollPane scollPane = new StudentScrollPane(manager);
+		scollPane.setSize(300, 150);
+		SearchInput searchInput = new SearchInput(manager);
 
 		// Set the search input listener
-		si.setListener(manager, rl);
+		searchInput.setListener(manager, scollPane);
 	}
 
 	/**

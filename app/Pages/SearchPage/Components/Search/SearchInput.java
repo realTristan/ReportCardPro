@@ -38,7 +38,7 @@ public class SearchInput extends Input {
    *                results list
    * @param rl      the results list to update when the input value changes
    */
-  public void setListener(Manager manager, ScrollPane rl) {
+  public void setListener(Manager manager, StudentScrollPane rl) {
     // Create a reference to the search input
     SearchInput searchInput = this;
 

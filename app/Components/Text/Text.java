@@ -16,8 +16,6 @@ public class Text extends JLabel {
    */
   public Text(String text, int x, int y) {
     super(text);
-
-    // Set the location of the text
     super.setLocation(x, y);
   }
 }

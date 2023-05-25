@@ -5,26 +5,13 @@ import javax.swing.JFrame;
 import Pages.SearchPage.SearchPage;
 import Pages.StudentPage.StudentPage;
 
-/*
- * Instead of switching pages, just make the home window the search,
- * and when the user clicks on the student, it will make a new window
- * for that student. This way, we don't have to worry about switching
- * pages, and we can just make a new window for each student. And we
- * can make the student page a JFrame and not a JPanel.
- */
-
 /**
  * A class for managing pages.
  */
 public class Manager {
-    // The pages
     public SearchPage searchPage;
     public StudentPage studentPage;
-
-    // The cache
     public Utils.StudentCache cache;
-
-    // The frame
     public JFrame frame;
 
     /**
@@ -36,8 +23,6 @@ public class Manager {
     public Manager(JFrame frame, Utils.StudentCache cache) {
         this.cache = cache;
         this.frame = frame;
-
-        // Set the content pane
         this.setSearchPage();
     }
 

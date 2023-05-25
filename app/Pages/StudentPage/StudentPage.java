@@ -8,32 +8,25 @@ import javax.swing.JPanel;
 
 import Pages.Manager;
 import Pages.StudentPage.Components.*;
-import Pages.StudentPage.Components.SaveButton.NewSaveButton;
+import Pages.StudentPage.Components.StudentInfo.CoursesAndGrades;
+import Pages.StudentPage.Components.StudentInfo.SaveButton;
 
 /**
  * A class for creating student pages.
  */
 public class StudentPage extends JFrame {
-  // The frame
   public JFrame frame;
-
-  // Student id
   public String id;
 
   /**
    * Constructs a new StudentPage object.
-   *
    */
   public StudentPage(String id) {
     super();
-
-    // Set the background color
     super.setBackground(Color.WHITE);
 
-    // Set the student id
+    // Local variables
     this.id = id;
-
-    // Set the frame properties
     this.frame = new JFrame(id);
     this.frame.setSize(400, 400);
     this.frame.setLayout(null);
@@ -48,28 +41,24 @@ public class StudentPage extends JFrame {
    * @param manager the manager to use for the student page
    */
   public void setContent(Manager manager) {
-    // Create the panel
-    Panel panel = new Panel(manager);
-
-    // Set the content pane
-    this.frame.setContentPane(panel);
+    this.frame.setContentPane(new Panel(manager));
   }
 
   /**
-   * A class for creating panels.
+   * A class for the student page panel.
    */
   public class Panel extends JPanel {
-    /**
-     * Constructs a new Panel object.
-     */
     public Panel(Manager manager) {
       super();
-
-      // Main Header
       new MainHeader(this);
 
-      // Add the save button
-      new NewSaveButton(this, manager, id);
+      // Store the student info
+      SubjectInput[] subjectInputs = new SubjectInput[4];
+		  GradeInput[] gradeInputs = new GradeInput[4];
+
+      // Add the student info
+      new CoursesAndGrades(manager, this, id, subjectInputs, gradeInputs);
+		  new SaveButton(manager, this, id, subjectInputs, gradeInputs);
     }
 
     /**

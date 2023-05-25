@@ -16,14 +16,8 @@ public class SubjectInput extends Input {
  */
   public SubjectInput(Panel panel, String subject) {
     super(0, 0, 15);
-
-    // Set the placeholder text for the input
     super.setPlaceholder("Subject");
-
-    // Set the text of the input
     super.setText(subject);
-
-    // Add the input to the canvas
     panel.add(this);
   }
 }
