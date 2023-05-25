@@ -34,7 +34,7 @@ public class StudentPage extends JFrame {
     this.id = id;
 
     // Set the frame properties
-    this.frame = new JFrame("Student: " + id);
+    this.frame = new JFrame(id);
     this.frame.setSize(400, 400);
     this.frame.setLayout(null);
     this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

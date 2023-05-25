@@ -8,29 +8,29 @@ import java.security.NoSuchAlgorithmException;
  * A class for encoding data.
  */
 public class Encoding {
-    /**
-     * Encodes the specified string using SHA-256.
-     *
-     * @return the encoded string
-     */
-    public static String SHA256() throws NoSuchAlgorithmException {
-        long time = Time.getNano();
+  /**
+   * Encodes the specified string using SHA-1.
+   *
+   * @return the encoded string
+   */
+  public static String SHA1() throws NoSuchAlgorithmException {
+    long time = Time.getNano();
 
-        // Convert the time into astring
-        String text = Long.toString(time);
-        
-        // Generate a mew SHA-256 hash
-        MessageDigest digest = MessageDigest.getInstance("SHA-256");
-        byte[] hash = digest.digest(text.getBytes(StandardCharsets.UTF_8));
-        
-        // Convert the hash into a string
-        String hex = Encoding.toHex(hash);
+    // Convert the time into astring
+    String text = Long.toString(time);
 
-        // Return the hash
-        return hex;
-    }
+    // Generate a new SHA-1 hash
+    MessageDigest digest = MessageDigest.getInstance("SHA-1");
+    byte[] hash = digest.digest(text.getBytes(StandardCharsets.UTF_8));
 
-    /**
+    // Convert the hash into a string
+    String hex = Encoding.toHex(hash);
+
+    // Return the hash
+    return hex;
+  }
+
+  /**
    * Converts the given byte array to a hex string.
    *
    * @param b the byte array to convert
