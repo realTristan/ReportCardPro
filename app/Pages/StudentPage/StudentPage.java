@@ -3,15 +3,18 @@ package Pages.StudentPage;
 import java.awt.Color;
 import java.awt.Graphics;
 
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import Pages.Manager;
 import Pages.StudentPage.Components.*;
 
 /**
  * A class for creating student pages.
  */
-public class StudentPage extends JPanel {
+public class StudentPage extends JFrame {
+  // The frame
+  public JFrame frame;
+
   /**
    * Constructs a new StudentPage object.
    *
@@ -19,6 +22,14 @@ public class StudentPage extends JPanel {
   public StudentPage() {
     super();
     super.setBackground(Color.WHITE);
+
+    // Set the frame properties
+    this.frame = new JFrame("Report Card Pro");
+    this.frame.setSize(400, 400);
+    this.frame.setLayout(null);
+    this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    this.frame.setVisible(true);
+    this.frame.setResizable(false);
   }
 
   /**
@@ -26,24 +37,39 @@ public class StudentPage extends JPanel {
    *
    * @param manager the manager to use for the student page
    */
-  public void setContent(Manager manager) {
-    // Make the import grades and new subject buttons
-    new SubjectButton(manager);
-    // new StudentIDHeader(manager, id);
-
-    // Make the new subject input
-    new SubjectInput(manager, 10, 60);
-    new SubjectInput(manager, 10, 90);
-    new SubjectInput(manager, 10, 120);
-    new SubjectInput(manager, 10, 150);
+  public void setContent() {
+    Panel panel = new Panel();
+    this.frame.setContentPane(panel);
   }
 
   /**
-   * Paints the components on the canvas.
-   *
-   * @param g the graphics object to use for painting
+   * A class for creating panels.
    */
-  public void paintComponent(Graphics g) {
-    super.paintComponent(g);
+  public class Panel extends JPanel {
+    /**
+     * Constructs a new Panel object.
+     */
+    public Panel() {
+      super();
+
+      // Make the import grades and new subject buttons
+      new SubjectButton(this);
+      // new StudentIDHeader(manager, id);
+
+      // Make the new subject input
+      new SubjectInput(this, 10, 60);
+      new SubjectInput(this, 10, 90);
+      new SubjectInput(this, 10, 120);
+      new SubjectInput(this, 10, 150);
+    }
+
+    /**
+     * Paints the components on the canvas.
+     *
+     * @param g the graphics object to use for painting
+     */
+    public void paintComponent(Graphics g) {
+      super.paintComponent(g);
+    }
   }
 }

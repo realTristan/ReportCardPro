@@ -5,6 +5,14 @@ import javax.swing.JFrame;
 import Pages.SearchPage.SearchPage;
 import Pages.StudentPage.StudentPage;
 
+/*
+ * Instead of switching pages, just make the home window the search,
+ * and when the user clicks on the student, it will make a new window
+ * for that student. This way, we don't have to worry about switching
+ * pages, and we can just make a new window for each student. And we
+ * can make the student page a JFrame and not a JPanel.
+ */
+
 /**
  * A class for managing pages.
  */
@@ -30,9 +38,6 @@ public class Manager {
         this.frame = frame;
 
         // Set the content pane
-        this.setStudentPage();
-
-        // Set the content pane
         this.setSearchPage();
     }
 
@@ -48,55 +53,8 @@ public class Manager {
     /**
      * Adds the student page to the content pane.
      */
-    public void setStudentPage() {
+    public void openStudentPage() {
         this.studentPage = new StudentPage();
-        this.studentPage.setContent(this);
-        this.frame.setContentPane(this.studentPage);
-    }
-
-    /**
-     * Hide the student page from the content pane.
-     */
-    public void hideStudentPage() {
-        this.studentPage.setVisible(false);
-    }
-
-    /**
-     * Hide the search page from the content pane.
-     */
-    public void hideSearchPage() {
-        this.searchPage.setVisible(false);
-    }
-
-    /**
-     * Show the student page from the content pane.
-     */
-    public void showStudentPage() {
-        this.studentPage.setVisible(true);
-        this.frame.setContentPane(this.studentPage);
-    }
-
-    /**
-     * Show the student page from the content pane.
-     */
-    public void showSearchPage() {
-        this.searchPage.setVisible(true);
-        this.frame.setContentPane(this.searchPage);
-    }
-
-    /**
-     * Switches the content pane to the search page and makes it visible.
-     */
-    public void toSearchPage() {
-        this.hideStudentPage();
-        this.showSearchPage();
-    }
-
-    /**
-     * Switches the content pane to the student page and makes it visible.
-     */
-    public void toStudentPage() {
-        this.hideSearchPage();
-        this.showStudentPage();
+        this.studentPage.setContent();
     }
 }
