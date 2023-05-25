@@ -1,10 +1,8 @@
-package Components.Listeners;
+package Components;
 
 import java.awt.Color;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
-
-import Components.Inputs.Input;
 
 /**
  * A class for creating placeholder listeners.

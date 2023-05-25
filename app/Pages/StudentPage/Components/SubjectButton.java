@@ -1,6 +1,7 @@
-package Components.Buttons;
+package Pages.StudentPage.Components;
 
-import Components.Canvas;
+import Components.Button;
+import Pages.StudentPage.StudentPage;
 
 /**
  * A class for creating buttons.
@@ -14,13 +15,13 @@ public class SubjectButton extends Button {
    * @param x the x-coordinate of the button
    * @param y the y-coordinate of the button
    */
-  public SubjectButton (Canvas canvas, int x, int y) {
+  public SubjectButton (StudentPage p, int x, int y) {
     super("Add Subject", x, y);
 
     // Set the button size
     super.setSize(150, 30);
 
     // Add the button to the canvas
-    canvas.add(this);
+    p.add(this);
   }
 }

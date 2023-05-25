@@ -1,4 +1,4 @@
-package Components.Listeners;
+package Pages.SearchPage.Components;
 
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;

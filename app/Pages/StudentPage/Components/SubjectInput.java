@@ -1,6 +1,7 @@
-package Components.Inputs;
+package Pages.StudentPage.Components;
 
-import Components.Canvas;
+import Components.Input;
+import Pages.StudentPage.StudentPage;
 
 /**
  * A class for creating input fields.
@@ -14,7 +15,7 @@ public class SubjectInput extends Input {
    * @param x      the x-coordinate of the input
    * @param y      the y-coordinate of the input
    */
-  public SubjectInput(Canvas canvas, int x, int y) {
+  public SubjectInput(StudentPage p, int x, int y) {
     super(x, y);
 
     // Set the bounds of the input
@@ -24,6 +25,6 @@ public class SubjectInput extends Input {
     super.setPlaceholder("Subject");
 
     // Add the input to the canvas
-    canvas.add(this);
+    p.add(this);
   }
 }

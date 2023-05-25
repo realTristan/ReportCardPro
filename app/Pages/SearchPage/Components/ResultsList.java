@@ -1,4 +1,4 @@
-package Components.Lists;
+package Pages.SearchPage.Components;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import javax.swing.JScrollPane;
 
 import org.json.simple.JSONObject;
 
-import Components.Canvas;
-import Components.Buttons.Button;
+import Components.Button;
+import Pages.SearchPage.SearchPage;
 
 /**
  * A class representing a list of results.
@@ -17,34 +17,34 @@ public class ResultsList extends JScrollPane {
    * Constructs a new ResultsList object and adds it to the given canvas at the
    * specified location and size.
    *
-   * @param canvas the canvas to add the results list to
+   * @param searchPage the canvas to add the results list to
    * @param x      the x-coordinate of the results list
    * @param y      the y-coordinate of the results list
    */
-  public ResultsList(Canvas canvas) {
+  public ResultsList(SearchPage searchPage) {
     super();
 
     // Set the location of the results list
-    super.setLocation(canvas.center - 150, 150);
+    super.setLocation(searchPage.center - 150, 150);
 
     // Set the students
-    this.setStudents(canvas, "");
+    this.setStudents(searchPage, "");
 
     // Add the results list to the canvas
-    canvas.add(this);
+    searchPage.add(this);
   }
 
   /**
    * Sets the students in the results list based on the given search value.
    *
-   * @param canvas the canvas to use for the results list
+   * @param searchPage the canvas to use for the results list
    * @param value  the search value to use for filtering the students
    */
-  public void setStudents(Canvas canvas, String value) {
+  public void setStudents(SearchPage searchPage, String value) {
     super.removeAll();
 
     // Get the students
-    List<JSONObject> students = canvas.cache.getStudents(value);
+    List<JSONObject> students = searchPage.cache.getStudents(value);
 
     // Iterate over the students
     int sep = 0;

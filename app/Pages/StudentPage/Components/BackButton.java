@@ -1,6 +1,7 @@
-package Components.Buttons;
+package Pages.StudentPage.Components;
 
-import Components.Canvas;
+import Components.Button;
+import Pages.StudentPage.StudentPage;
 
 /**
  * A class for creating back buttons.
@@ -12,23 +13,18 @@ public class BackButton extends Button {
      *
      * @param canvas the canvas to add the button to
      */
-    public BackButton(Canvas canvas) {
+    public BackButton(StudentPage p) {
         // Create the button
-        super("Back", canvas.center - 60, 250);
+        super("Back", 20, 250);
 
         // Set the button size
         super.setSize(120, 30);
 
         // Add the action listener
         super.addActionListener(e -> {
-            // Remove all components from the canvas
-            canvas.removeAll();
-
-            // Move to the search page
-            new Pages.SearchPage(canvas);
         });
 
         // Add the button to the canvas
-        canvas.add(this);
+        p.add(this);
     }
 }

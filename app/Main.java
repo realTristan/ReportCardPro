@@ -3,6 +3,8 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 
 import Components.Canvas;
+import Pages.SearchPage.SearchPage;
+import Pages.StudentPage.StudentPage;
 import Utils.Cache;
 
 /**
@@ -16,9 +18,9 @@ class Main {
     // Initialize the cache
     Cache cache = new Cache();
 
-    // Establish Canvas
-    Canvas content = new Canvas(cache);
-    window.setContentPane(content);
+    // Init pages
+    SearchPage searchPage = new SearchPage(cache);
+    StudentPage studentPage = new StudentPage();
 
     // Set the UI Parameters
     window.setSize(400, 400);

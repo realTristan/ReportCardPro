@@ -1,8 +1,9 @@
-package Components.Buttons;
+package Pages.SearchPage.Components;
 
 import javax.swing.JOptionPane;
 
-import Components.Canvas;
+import Components.Button;
+import Pages.SearchPage.SearchPage;
 
 /**
  * A class for creating buttons.
@@ -14,9 +15,9 @@ public class NewStudentButton extends Button {
      *
      * @param canvas the canvas to add the button to
      */
-    public NewStudentButton(Canvas canvas) {
+    public NewStudentButton(SearchPage p) {
         // Create the button
-        super("New Student", canvas.center - 60, 250);
+        super("New Student", 0, 250);
 
         // Set the button size
         super.setSize(120, 30);
@@ -31,7 +32,7 @@ public class NewStudentButton extends Button {
         });
 
         // Add the button to the canvas
-        canvas.add(this);
+        p.add(this);
     }
 
     /**

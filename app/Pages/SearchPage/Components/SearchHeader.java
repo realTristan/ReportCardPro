@@ -1,8 +1,9 @@
-package Components.Text;
+package Pages.SearchPage.Components;
 
 import java.awt.Font;
 
-import Components.Canvas;
+import Components.Text;
+import Pages.SearchPage.SearchPage;
 
 /**
  * A class for creating text headers.
@@ -12,11 +13,11 @@ public class SearchHeader extends Text {
    * Constructs a new SearchHeader object and sets its bounds to the specified
    * location and size.
    *
-   * @param canvas the canvas to add the header to
+   * @param searchPage the canvas to add the header to
    */
-  public SearchHeader(Canvas canvas) {
+  public SearchHeader(SearchPage searchPage) {
     // Create the label
-    super("Search for Student", canvas.center - 60, 70);
+    super("Search for Student", searchPage.center - 60, 70);
     super.setSize(300, 30);
 
     // Set the label font
@@ -24,6 +25,6 @@ public class SearchHeader extends Text {
     super.setFont(font);
     
     // Add the label to the canvas
-    canvas.add(this);
+    searchPage.add(this);
   }
 }
