@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 import Pages.Manager;
+import Pages.SearchPage.Components.Footer;
 import Pages.SearchPage.Components.MainHeader;
 import Pages.SearchPage.Components.SearchHeader;
 import Pages.SearchPage.Components.SearchInput;
@@ -32,6 +33,7 @@ public class SearchPage extends JPanel {
 		// Text headers
 		new MainHeader(manager);
 		new SearchHeader(manager);
+		new Footer(manager);
 
 		// Search Bar
 		ResultsList rl = new ResultsList(manager);

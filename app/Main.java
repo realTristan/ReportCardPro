@@ -19,8 +19,6 @@ class Main {
 
     // Set the UI Parameters
     frame.setSize(400, 400);
-    // Center align layout
-    frame.setLocationRelativeTo(null);
     frame.setLayout(null);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setVisible(true);

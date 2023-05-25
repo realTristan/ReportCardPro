@@ -1,4 +1,4 @@
-package Pages.SearchPage.Components;
+package Pages.SearchPage.Components.NewStudent;
 
 import javax.swing.JOptionPane;
 
