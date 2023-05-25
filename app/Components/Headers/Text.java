@@ -13,11 +13,9 @@ public class Text extends JLabel {
    * @param text the text to display
    * @param x the x-coordinate of the text
    * @param y the y-coordinate of the text
-   * @param w the width of the text
-   * @param h the height of the text
    */
-  public Text(String text, int x, int y, int w, int h) {
+  public Text(String text, int x, int y) {
     super(text);
-    super.setBounds(x, y, w, h);
+    super.setLocation(x, y);
   }
 }

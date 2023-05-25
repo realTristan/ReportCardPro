@@ -13,11 +13,9 @@ public class Button extends JButton {
    * @param text the text to display on the button
    * @param x the x-coordinate of the button
    * @param y the y-coordinate of the button
-   * @param w the width of the button
-   * @param h the height of the button
    */
-  public Button(String text, int x, int y, int w, int h) {
+  public Button(String text, int x, int y) {
     super(text);
-    super.setBounds(x, y, w, h);
+    super.setLocation(x, y);
   }
 }

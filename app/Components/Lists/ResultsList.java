@@ -51,7 +51,8 @@ public class ResultsList {
       String name = (String) student.get("last_name");
 
       // Create the button
-      Button button = new Button(name, 0, sep, 300, 30);
+      Button button = new Button(name, 0, sep);
+      button.setSize(300, 30);
       pane.add(button);
 
       // Increment the separator

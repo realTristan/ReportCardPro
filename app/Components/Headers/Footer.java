@@ -16,7 +16,8 @@ public class Footer extends Text {
    */
   public Footer(Canvas canvas) {
     // Create the label
-    super("v1.0.0 made by Tristan, Jagger, Jett", 198, 330, 300, 30);
+    super("v1.0.0 made by Tristan, Jagger, Jett", 198, 330);
+    super.setSize(300, 30);
     
     // Set the label font
     Font font = new Font("Arial", Font.PLAIN, 11);

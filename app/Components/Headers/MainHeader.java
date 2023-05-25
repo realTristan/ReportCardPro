@@ -16,7 +16,8 @@ public class MainHeader extends Text {
    */
   public MainHeader(Canvas canvas) {
     // Create the label
-    super("Report Card Pro", 75, 20, 300, 30);
+    super("Report Card Pro", 75, 20);
+    super.setSize(300, 30);
 
     // Set the label font
     Font font = new Font("Arial", Font.BOLD, 30);

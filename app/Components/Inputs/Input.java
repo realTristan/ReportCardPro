@@ -16,11 +16,10 @@ public class Input extends JTextField {
    *
    * @param x the x-coordinate of the input
    * @param y the y-coordinate of the input
-   * @param w the width of the input
-   * @param h the height of the input
    */
-  public Input() {
+  public Input(int x, int y) {
     super();
+    super.setLocation(x, y);
   }
 
   /**
