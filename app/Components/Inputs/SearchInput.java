@@ -48,9 +48,7 @@ public class SearchInput extends Input {
         String value = searchInput.getText();
 
         // Update the results list
-        if (value.length() > 0) {
-          rl.setStudents(canvas, value);
-        }
+        rl.setStudents(canvas, value);
       }
     });
   }
