@@ -18,8 +18,10 @@ public class SearchHeader extends Text {
    */
   public SearchHeader(Manager manager) {
     // Create the label
-    super("Search for Student", 60, 70);
-    super.setSize(300, 30);
+    super("Search for Student", 150, 70);
+
+    // Set the label size
+    super.setSize(200, 30);
 
     // Set the label font
     Font font = new Font("Arial", Font.PLAIN, 15);

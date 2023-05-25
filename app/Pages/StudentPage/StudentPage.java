@@ -6,7 +6,9 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import Pages.Manager;
 import Pages.StudentPage.Components.*;
+import Pages.StudentPage.Components.SaveButtons.SaveButtonList;
 
 /**
  * A class for creating student pages.
@@ -15,13 +17,21 @@ public class StudentPage extends JFrame {
   // The frame
   public JFrame frame;
 
+  // Student id
+  public String id;
+
   /**
    * Constructs a new StudentPage object.
    *
    */
   public StudentPage(String id) {
     super();
+
+    // Set the background color
     super.setBackground(Color.WHITE);
+
+    // Set the student id
+    this.id = id;
 
     // Set the frame properties
     this.frame = new JFrame("Student: " + id);
@@ -37,8 +47,11 @@ public class StudentPage extends JFrame {
    *
    * @param manager the manager to use for the student page
    */
-  public void setContent() {
-    Panel panel = new Panel();
+  public void setContent(Manager manager) {
+    // Create the panel
+    Panel panel = new Panel(manager);
+
+    // Set the content pane
     this.frame.setContentPane(panel);
   }
 
@@ -49,28 +62,14 @@ public class StudentPage extends JFrame {
     /**
      * Constructs a new Panel object.
      */
-    public Panel() {
+    public Panel(Manager manager) {
       super();
 
       // Main Header
       new MainHeader(this);
 
-      // Inputs array
-      SubjectInput[] subjectInputs = new SubjectInput[4];
-      GradeInput[] gradeInputs = new GradeInput[4];
-
-      // Add the inputs to the canvas
-      for (int i = 0; i < 4; i++) {
-        // Create the subject input
-        subjectInputs[i] = new SubjectInput(this, 10, 60 + (i * 30));
-
-        // Create the grade input
-        gradeInputs[i] = new GradeInput(this);
-      }
-
-      // Make the add new subject button
-      new SaveButton(this);
-      // new StudentIDHeader(manager, id);
+      // Add the save button
+      new SaveButtonList(this, manager, id);
     }
 
     /**

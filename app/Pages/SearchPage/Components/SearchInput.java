@@ -3,7 +3,9 @@ package Pages.SearchPage.Components;
 import javax.swing.event.DocumentEvent;
 
 import Components.Input;
+import Components.InputListener;
 import Pages.Manager;
+import Pages.SearchPage.Components.ResultList.ResultsList;
 
 /**
  * A class for creating search inputs.
@@ -17,7 +19,7 @@ public class SearchInput extends Input {
    *                canvas
    */
   public SearchInput(Manager manager) {
-    super(100, 100, 15);
+    super(110, 100, 15);
 
     // Set the placeholder text for the input
     super.setPlaceholder("Search for student");
@@ -50,7 +52,7 @@ public class SearchInput extends Input {
         String value = searchInput.getText();
 
         // Update the results list
-        rl.setStudents(manager, value);
+        rl.updateStudentList(manager, value);
       }
     });
   }

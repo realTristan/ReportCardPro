@@ -18,6 +18,8 @@ public class StudentButton extends Button {
      */
     public StudentButton(Manager manager, String s, String id, int ysep) {
         super(s, 0, ysep);
+
+        // Set the button size
         super.setSize(300, 30);
 
         // On button click, open the student page

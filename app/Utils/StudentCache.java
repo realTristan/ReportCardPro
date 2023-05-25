@@ -2,19 +2,21 @@ package Utils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.json.simple.JSONObject;
 
 /**
  * A class for caching students.
  */
-public class Cache {
+public class StudentCache {
   public JSONObject students = new JSONObject();
 
   /**
- * Constructs a new Cache object and initializes it with the contents of the "students.json" file.
- */
-  public Cache() {
+   * Constructs a new Cache object and initializes it with the contents of the
+   * "students.json" file.
+   */
+  public StudentCache() {
     try {
       students = Json.read("students.json");
     } catch (Exception e) {
@@ -40,13 +42,13 @@ public class Cache {
    */
   public List<JSONObject> allStudents() {
     // Create a new array
-      List<JSONObject> res = new ArrayList<JSONObject>();
+    List<JSONObject> res = new ArrayList<JSONObject>();
 
-      // Iterate over the cache and add all the students
-      for (Object key : students.keySet()) {
-        res.add((JSONObject) students.get(key));
-      }
-      return res;
+    // Iterate over the cache and add all the students
+    for (Object key : students.keySet()) {
+      res.add((JSONObject) students.get(key));
+    }
+    return res;
   }
 
   /**
@@ -80,6 +82,28 @@ public class Cache {
 
     // Return the results
     return res;
+  }
+
+  // Update the student
+  public void updateStudentCourses(String id, List<Map<String, Object>> subjects) {
+    // Get the student
+    JSONObject student = (JSONObject) students.get(id);
+
+    // Update the courses
+    student.put("courses", subjects);
+    students.put(id, student);
+
+    // Export the cache
+    export();
+  }
+
+  // Get student courses
+  public List<Map<String, Object>> getStudentCourses(String id) {
+    // Get the student
+    JSONObject student = (JSONObject) students.get(id);
+
+    // Return the courses
+    return (List<Map<String, Object>>) student.get("courses");
   }
 
 }

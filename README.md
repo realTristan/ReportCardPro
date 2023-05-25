@@ -3,11 +3,10 @@
 
 # To do
 1. Add new student (pop-up) (dialog box with input)
-2. Students Page
-3. Add/Remove Courses
-4. Set Course Grades
-5. Update Cache Functions
-6. Be able to make a .png with all of the students grades
+2. Add/Remove Courses
+3. Set Course Grades
+4. Update Cache Functions
+5. Be able to make a .png with all of the students grades
 
 # License 
 MIT License

@@ -1,7 +1,7 @@
 import javax.swing.JFrame;
 
 import Pages.Manager;
-import Utils.Cache;
+import Utils.StudentCache;
 
 /**
  * The main class for the application.
@@ -12,13 +12,15 @@ class Main {
     JFrame frame = new JFrame("Report Card Pro");
 
     // Initialize the cache
-    Cache cache = new Cache();
+    StudentCache cache = new StudentCache();
 
     // Init page manager
     new Manager(frame, cache);
 
     // Set the UI Parameters
     frame.setSize(400, 400);
+    // Center align layout
+    frame.setLocationRelativeTo(null);
     frame.setLayout(null);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setVisible(true);

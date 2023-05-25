@@ -22,7 +22,7 @@ public class Manager {
     public StudentPage studentPage;
 
     // The cache
-    public Utils.Cache cache;
+    public Utils.StudentCache cache;
 
     // The frame
     public JFrame frame;
@@ -33,7 +33,7 @@ public class Manager {
      * @param frame the frame to use for the manager
      * @param cache the cache to use for the manager
      */
-    public Manager(JFrame frame, Utils.Cache cache) {
+    public Manager(JFrame frame, Utils.StudentCache cache) {
         this.cache = cache;
         this.frame = frame;
 
@@ -55,6 +55,6 @@ public class Manager {
      */
     public void openStudentPage(String id) {
         this.studentPage = new StudentPage(id);
-        this.studentPage.setContent();
+        this.studentPage.setContent(this);
     }
 }
