@@ -58,7 +58,7 @@ public class Cache {
   public List<JSONObject> getStudents(String value) {
     // Return all the students if the value is empty
     if (value.length() == 0) {
-      return this.allStudents();
+      return new ArrayList<JSONObject>();
     }
 
     // Create a dynamic array

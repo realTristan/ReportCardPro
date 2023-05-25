@@ -25,9 +25,6 @@ public class ResultsList extends JScrollPane {
     // Set the location of the results list
     super.setLocation(150, 150);
 
-    // Set the students
-    this.setStudents(manager, "");
-
     // Add the results list to the canvas
     manager.searchPage.add(this);
   }
