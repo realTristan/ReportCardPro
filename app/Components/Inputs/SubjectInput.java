@@ -16,8 +16,14 @@ public class SubjectInput extends Input {
    */
   public SubjectInput(Canvas canvas, int x, int y) {
     super(x, y);
+
+    // Set the bounds of the input
     super.setBounds(x, y, 150, 30);
+
+    // Set the placeholder text for the input
     super.setPlaceholder("Subject");
+
+    // Add the input to the canvas
     canvas.add(this);
   }
 }

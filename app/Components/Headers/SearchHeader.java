@@ -16,7 +16,7 @@ public class SearchHeader extends Text {
    */
   public SearchHeader(Canvas canvas) {
     // Create the label
-    super("Search for Student", 125, 70);
+    super("Search for Student", canvas.center - 60, 70);
     super.setSize(300, 30);
 
     // Set the label font

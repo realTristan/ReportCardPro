@@ -22,8 +22,9 @@ public class SearchPage {
 		new Footer(canvas);
 
 		// Search Bar
-		ResultsList rl = new ResultsList(canvas, 40, 150, 300, 150);
-		SearchInput si = new SearchInput(canvas, 100, 100);
+		ResultsList rl = new ResultsList(canvas);
+		rl.setSize(300, 150);
+		SearchInput si = new SearchInput(canvas);
 
 		// Set the search input listener
 		si.setListener(canvas, rl);

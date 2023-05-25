@@ -1,10 +1,8 @@
 package Components.Inputs;
 
-import java.awt.Color;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-
 import javax.swing.JTextField;
+
+import Components.Listeners.PlaceholderListener;
 
 /**
  * A class for creating input fields.
@@ -28,23 +26,13 @@ public class Input extends JTextField {
    * @param placeholder the placeholder text to use
    */
   public void setPlaceholder(String placeholder) {
+    // Create a reference to the input
     Input input = this;
-    super.addFocusListener(new FocusListener() {
-      @Override
-      public void focusGained(FocusEvent e) {
-        if (input.getText().equals("Search")) {
-          input.setText("");
-          input.setForeground(Color.BLACK);
-        }
-      }
 
-      @Override
-      public void focusLost(FocusEvent e) {
-        if (input.getText().isEmpty()) {
-          input.setForeground(Color.GRAY);
-          input.setText("Search");
-        }
-      }
-    });
+    // Create a listener for the input
+    PlaceholderListener listener = new PlaceholderListener(input, placeholder);
+
+    // Add the listener to the input
+    super.addFocusListener(listener);
   }
 }

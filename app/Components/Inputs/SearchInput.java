@@ -4,6 +4,7 @@ import javax.swing.event.DocumentEvent;
 
 import Components.Canvas;
 import Components.Lists.ResultsList;
+import Components.Listeners.InputListener;
 
 /**
  * A class for creating search inputs.
@@ -14,13 +15,20 @@ public class SearchInput extends Input {
    * location and size.
    *
    * @param canvas the canvas to add the input to
-   * @param x      the x-coordinate of the input
-   * @param y      the y-coordinate of the input
    */
-  public SearchInput(Canvas canvas, int x, int y) {
-    super(x, y);
+  public SearchInput(Canvas canvas) {
+    super(0, 0);
+
+    // Set the placeholder text for the input
     super.setPlaceholder("Search for student");
-    super.setSize(150, 30);
+
+    // Reset the location
+    super.setLocation(canvas.center - 100, 100);
+
+    // Set the size of the input
+    super.setSize(200, 30);
+
+    // Add the input to the canvas
     canvas.add(this);
   }
 
@@ -31,11 +39,18 @@ public class SearchInput extends Input {
    * @param rl     the results list to use for the search input
    */
   public void setListener(Canvas canvas, ResultsList rl) {
-    SearchInput si = this;
-    super.getDocument().addDocumentListener(new Listener() {
+    // Create a reference to the search input
+    SearchInput searchInput = this;
+
+    // Add a listener to the document
+    super.getDocument().addDocumentListener(new InputListener() {
+      // When the document is updated
       @Override
       public void update(DocumentEvent e) {
-        String value = si.getText();
+        // Get the value of the input
+        String value = searchInput.getText();
+
+        // Update the results list
         rl.setStudents(canvas, value);
       }
     });

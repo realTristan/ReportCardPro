@@ -16,7 +16,11 @@ public class SubjectButton extends Button {
    */
   public SubjectButton (Canvas canvas, int x, int y) {
     super("Add Subject", x, y);
+
+    // Set the button size
     super.setSize(150, 30);
+
+    // Add the button to the canvas
     canvas.add(this);
   }
 }

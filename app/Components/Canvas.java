@@ -8,6 +8,7 @@ import javax.swing.*;
  */
 public class Canvas extends JPanel {
   public Utils.Cache cache;
+  public int center;
 
   /**
    * Constructs a new Canvas object with the given cache and sets its background
@@ -16,6 +17,7 @@ public class Canvas extends JPanel {
    * @param cache the cache to use for the canvas
    */
   public Canvas(Utils.Cache cache) {
+    super();
     this.cache = cache;
     super.setBackground(Color.WHITE);
   }
@@ -23,6 +25,7 @@ public class Canvas extends JPanel {
   // Paint components
   public void paintComponent(Graphics g) {
     super.paintComponent(g);
+    this.center = super.getWidth() / 2;
 
     // Draw components
     new Pages.SearchPage(this);
