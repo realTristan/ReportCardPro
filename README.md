@@ -3,10 +3,9 @@
 
 # To do
 1. Add new student (pop-up) (dialog box with input)
-2. Add/Remove Courses
-3. Set Course Grades
-4. Update Cache Functions
-5. Be able to make a .png with all of the students grades
+2. Remove a student
+3. Display student average
+4. Print the students report card (.png)
 
 # License 
 MIT License
