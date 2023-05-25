@@ -18,16 +18,22 @@ public class Canvas extends JPanel {
    */
   public Canvas(Utils.Cache cache) {
     super();
+
+    // Set the cache
     this.cache = cache;
+
+    // Set the background color
     super.setBackground(Color.WHITE);
   }
 
   // Paint components
   public void paintComponent(Graphics g) {
     super.paintComponent(g);
+
+    // Set the center width
     this.center = super.getWidth() / 2;
 
-    // Draw components
+    // Starting page
     new Pages.SearchPage(this);
   }
 }

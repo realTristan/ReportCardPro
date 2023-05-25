@@ -17,13 +17,10 @@ public class SearchInput extends Input {
    * @param canvas the canvas to add the input to
    */
   public SearchInput(Canvas canvas) {
-    super(0, 0);
+    super(canvas.center - 1, 100);
 
     // Set the placeholder text for the input
     super.setPlaceholder("Search for student");
-
-    // Reset the location
-    super.setLocation(canvas.center - 100, 100);
 
     // Set the size of the input
     super.setSize(200, 30);

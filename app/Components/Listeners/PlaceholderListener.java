@@ -31,7 +31,7 @@ public class PlaceholderListener implements FocusListener {
     /**
      * Sets the placeholder text for the input.
      *
-     * @param placeholder the placeholder text to use
+     * @param e the focus event to use
      */
     @Override
     public void focusGained(FocusEvent e) {
@@ -44,7 +44,7 @@ public class PlaceholderListener implements FocusListener {
     /**
      * Sets the placeholder text for the input.
      *
-     * @param placeholder the placeholder text to use
+     * @param e the focus event to use
      */
     @Override
     public void focusLost(FocusEvent e) {
