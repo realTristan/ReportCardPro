@@ -1,5 +1,6 @@
 package Pages.StudentPage.Components;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import Components.Button;
@@ -7,7 +8,7 @@ import Pages.Manager;
 import Pages.StudentPage.StudentPage.Panel;
 
 public class DeleteStudentButton extends Button {
-  public DeleteStudentButton(Manager manager, Panel panel, String id) {
+  public DeleteStudentButton(Manager manager, Panel panel, JFrame frame, String id) {
     super("Delete Student", 0, 0);
     super.addActionListener(e -> {
       Object res = this.getIdDialog(id);
@@ -18,7 +19,7 @@ public class DeleteStudentButton extends Button {
       // If the id's match, delete the student
       if (this.doIdsMatch(id, (String) res)) {
         manager.cache.removeStudent(id);
-        manager.studentPage.frame.dispose();
+        frame.dispose();
       } else {
         this.errorDialog();
       }

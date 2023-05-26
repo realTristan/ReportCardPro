@@ -64,7 +64,7 @@ public class StudentPage extends JFrame {
       new CoursesAndGrades(manager, this, id, subjectInputs, gradeInputs);
 		  new SaveButton(manager, this, id, subjectInputs, gradeInputs, header);
       new PrintReport(manager, this, id);
-      new DeleteStudentButton(manager, this, id);
+      new DeleteStudentButton(manager, this, frame, id);
     }
 
     /**
