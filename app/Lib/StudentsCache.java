@@ -43,7 +43,7 @@ public class StudentsCache {
    *
    * @return a list of JSONObjects representing the students
    */
-  public List<JSONObject> allStudents() {
+  public List<JSONObject> getAllStudents() {
     // Create a new array
     List<JSONObject> res = new ArrayList<JSONObject>();
 
@@ -181,11 +181,17 @@ public class StudentsCache {
     // Generate a random id
     String id = Utils.Encoding.SHA1();
 
+    // Create an array of couses
+    List<Map<String, Object>> courses = new ArrayList<Map<String, Object>>();
+    for (int i = 0; i < 4; i++) {
+      courses.add(Map.of("subject", "Subject", "grade", 0));
+    }
+
     // Set the student properties
     student.put("first_name", nameSplit[0]);
     student.put("last_name", nameSplit[1]);
     student.put("id", id);
-    student.put("courses", new ArrayList<Map<String, Object>>());
+    student.put("courses", courses);
 
     // Add the student to the cache
     students.put(id, student);
