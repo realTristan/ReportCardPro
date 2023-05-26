@@ -17,7 +17,7 @@ public class StudentButtonList {
    *                buttons to the results list
    * @param value   the search value to use for filtering the students
    */
-  public static void updateList(StudentScrollPane list, Manager manager, String value) {
+  public static void updateList(Manager manager, StudentScrollPane list, String value) {
     // Remove all the buttons
     list.removeAll();
 

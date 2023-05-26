@@ -1,22 +1,25 @@
-package Utils;
+package Lib;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import org.json.simple.JSONObject;
 
+import Utils.Json;
+
 /**
  * A class for caching students.
  */
-public class StudentCache {
+public class StudentsCache {
   public JSONObject students = new JSONObject();
 
   /**
    * Constructs a new Cache object and initializes it with the contents of the
    * "students.json" file.
    */
-  public StudentCache() {
+  public StudentsCache() {
     try {
       students = Json.read("students.json");
     } catch (Exception e) {
@@ -99,7 +102,7 @@ public class StudentCache {
     students.put(id, student);
 
     // Export the cache
-    export();
+    this.export();
   }
 
   /**
@@ -109,10 +112,46 @@ public class StudentCache {
    * @return a list of courses
    */
   public List<Map<String, Object>> getStudentCourses(String id) {
-    // Get the student
     JSONObject student = (JSONObject) students.get(id);
-
-    // Return the courses
     return (List<Map<String, Object>>) student.get("courses");
+  }
+
+  /**
+   * Returns the student with the given id.
+   *
+   * @param id the id of the student
+   * @return a JSONObject representing the student
+   */
+  public void removeStudent(String id) {
+    students.remove(id);
+    this.export();
+  }
+
+  /**
+   * Adds a student to the cache.
+   *
+   * @param name the name of the student
+   */
+  public void addStudent(String name) throws NoSuchAlgorithmException {
+    // Create the student
+    JSONObject student = new JSONObject();
+
+    // Name split
+    String[] nameSplit = name.split(";");
+
+    // Generate a random id
+    String id = Utils.Encoding.SHA1();
+
+    // Set the student properties
+    student.put("first_name", nameSplit[0]);
+    student.put("last_name", nameSplit[1]);
+    student.put("id", id);
+    student.put("courses", new ArrayList<Map<String, Object>>());
+
+    // Add the student to the cache
+    students.put(id, student);
+
+    // Export the cache
+    this.export();
   }
 }

@@ -32,6 +32,6 @@ public class StudentScrollPane extends JScrollPane {
    * @param value   the value to use for filtering the students
    */
   public void updateStudentList(Manager manager, String value) {
-    StudentButtonList.updateList(this, manager, value);
+    StudentButtonList.updateList(manager, this, value);
   }
 }

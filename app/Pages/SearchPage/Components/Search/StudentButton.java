@@ -14,6 +14,7 @@ public class StudentButton extends Button {
    * @param manager the manager to use for opening the student page when the
    *                button is clicked
    * @param s       the text to display on the button
+   * @param id      the id of the student to open the page for
    * @param ysep    the y-coordinate of the button
    */
   public StudentButton(Manager manager, String s, String id, int ysep) {

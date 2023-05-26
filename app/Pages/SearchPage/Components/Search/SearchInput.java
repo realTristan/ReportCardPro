@@ -34,11 +34,11 @@ public class SearchInput extends Input {
    * Sets a document listener on the search input to update the results list when
    * the input value changes.
    *
-   * @param manager the manager to use for getting the students and updating the
-   *                results list
-   * @param rl      the results list to update when the input value changes
+   * @param manager   the manager to use for getting the students and updating the
+   *                  results list
+   * @param srollPane the scroll pane update when the input value changes
    */
-  public void setListener(Manager manager, StudentScrollPane rl) {
+  public void setListener(Manager manager, StudentScrollPane scrollPane) {
     // Create a reference to the search input
     SearchInput searchInput = this;
 
@@ -51,7 +51,7 @@ public class SearchInput extends Input {
         String value = searchInput.getText();
 
         // Update the results list
-        rl.updateStudentList(manager, value);
+        scrollPane.updateStudentList(manager, value);
       }
     });
   }

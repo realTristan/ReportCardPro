@@ -19,6 +19,8 @@ public class NewStudentButton extends Button {
   public NewStudentButton(Manager manager) {
     super("New Student", 0, 250);
     super.setSize(120, 30);
+
+    // Add action listener to the button
     super.addActionListener(e -> {
       Object res = this.getNameDialog();
       System.out.println(res);
