@@ -1,5 +1,5 @@
 # Report Card Pro ![Stars](https://img.shields.io/github/stars/realTristan/ReportCardPro?color=brightgreen) ![Watchers](https://img.shields.io/github/watchers/realTristan/ReportCardPro?label=Watchers)
-<img width="784" alt="Screenshot 2023-05-25 at 8 59 52 PM" src="https://github.com/realTristan/ReportCardPro/assets/75189508/0d34a00a-c80d-49a7-bda7-30190c6a2e0e">
+<img width="1214" alt="Screenshot 2023-05-25 at 9 05 30 PM" src="https://github.com/realTristan/ReportCardPro/assets/75189508/8887de4b-afd0-4d86-999c-d17fab474c16">
 
 # To do
 1. Add new student (pop-up) (dialog box with input)
