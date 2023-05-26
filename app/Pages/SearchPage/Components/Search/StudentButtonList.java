@@ -22,7 +22,7 @@ public class StudentButtonList {
     list.removeAll();
 
     // Get the students
-    List<JSONObject> students = manager.cache.getStudents(value);
+    List<JSONObject> students = manager.cache.searchStudents(value);
 
     // Iterate over the students
     int ysep = 0;

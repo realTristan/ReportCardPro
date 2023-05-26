@@ -17,9 +17,9 @@ public class StudentButton extends Button {
    * @param id      the id of the student to open the page for
    * @param ysep    the y-coordinate of the button
    */
-  public StudentButton(Manager manager, String s, String id, int ysep) {
-    super(s, 0, ysep);
+  public StudentButton(Manager manager, String name, String id, int ysep) {
+    super(name, 0, ysep);
     super.setSize(300, 30);
-    super.addActionListener(e -> manager.openStudentPage(id));
+    super.addActionListener(e -> manager.openStudentPage(id, name));
   }
 }

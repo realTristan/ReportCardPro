@@ -60,7 +60,7 @@ public class StudentsCache {
    * @param value the value to search for in the student names
    * @return a list of JSONObjects representing the matching students
    */
-  public List<JSONObject> getStudents(String value) {
+  public List<JSONObject> searchStudents(String value) {
     // Return all the students if the value is empty
     if (value.length() == 0) {
       return new ArrayList<JSONObject>();
@@ -114,6 +114,27 @@ public class StudentsCache {
   public List<Map<String, Object>> getStudentCourses(String id) {
     JSONObject student = (JSONObject) students.get(id);
     return (List<Map<String, Object>>) student.get("courses");
+  }
+
+  /**
+   * Returns the average of the student with the given id.
+   *
+   * @param id the id of the student
+   * @return the average of the student
+   */
+  public double getStudentAverage(String id) {
+    // Get the student
+    JSONObject student = (JSONObject) students.get(id);
+
+    // Get the courses
+    List<Map<String, Object>> courses = (List<Map<String, Object>>) student.get("courses");
+
+    // Calculate the average
+    double sum = 0;
+    for (Map<String, Object> course : courses) {
+      sum += (double) course.get("grade");
+    }
+    return sum / courses.size();
   }
 
   /**

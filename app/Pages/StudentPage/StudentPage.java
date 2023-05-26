@@ -17,18 +17,20 @@ import Pages.StudentPage.Components.StudentInfo.SaveButton;
 public class StudentPage extends JFrame {
   public JFrame frame;
   public String id;
+  public String name;
 
   /**
    * Constructs a new StudentPage object.
    */
-  public StudentPage(String id) {
+  public StudentPage(String id, String name) {
     super();
     super.setBackground(Color.WHITE);
 
     // Local variables
     this.id = id;
+    this.name = name;
     this.frame = new JFrame(id);
-    this.frame.setSize(300, 250);
+    this.frame.setSize(300, 270);
     this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     this.frame.setVisible(true);
   }
@@ -50,6 +52,10 @@ public class StudentPage extends JFrame {
       super();
       new MainHeader(this);
 
+      // Get the student's average
+      double average = manager.cache.getStudentAverage(id);
+      new StudentNameHeader(this, name, average);
+
       // Store the student info
       SubjectInput[] subjectInputs = new SubjectInput[4];
 		  GradeInput[] gradeInputs = new GradeInput[4];
@@ -57,6 +63,7 @@ public class StudentPage extends JFrame {
       // Add the student info
       new CoursesAndGrades(manager, this, id, subjectInputs, gradeInputs);
 		  new SaveButton(manager, this, id, subjectInputs, gradeInputs);
+      new PrintReport(manager, this, id);
     }
 
     /**

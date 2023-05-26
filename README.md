@@ -4,8 +4,6 @@
 # To do
 1. Add new student (pop-up) (dialog box with input)
 2. Remove a student
-3. Display student average
-4. Print the students report card to terminal
 
 # License 
 MIT License
