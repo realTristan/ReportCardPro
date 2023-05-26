@@ -54,7 +54,7 @@ public class StudentPage extends JFrame {
 
       // Get the student's average
       double average = manager.cache.getStudentAverage(id);
-      new StudentNameHeader(this, name, average);
+      StudentNameHeader header = new StudentNameHeader(this, name, average);
 
       // Store the student info
       SubjectInput[] subjectInputs = new SubjectInput[4];
@@ -62,7 +62,7 @@ public class StudentPage extends JFrame {
 
       // Add the student info
       new CoursesAndGrades(manager, this, id, subjectInputs, gradeInputs);
-		  new SaveButton(manager, this, id, subjectInputs, gradeInputs);
+		  new SaveButton(manager, this, id, subjectInputs, gradeInputs, header);
       new PrintReport(manager, this, id);
     }
 

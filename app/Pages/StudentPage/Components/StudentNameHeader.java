@@ -1,5 +1,6 @@
 package Pages.StudentPage.Components;
 
+import Pages.Manager;
 import Pages.StudentPage.StudentPage.Panel;
 
 import java.awt.Font;
@@ -25,5 +26,17 @@ public class StudentNameHeader extends Text {
 
         // Add the component to the panel
         panel.add(this);
+    }
+
+    /**
+     * Updates the text of the header.
+     *
+     * @param name    the name of the student
+     * @param average the average of the student
+     */
+    public void update(Manager manager, String id) {
+        double average = manager.cache.getStudentAverage(id);
+        String name = manager.cache.getStudentName(id);
+        super.setText(name + ": " + average + "%");
     }
 }

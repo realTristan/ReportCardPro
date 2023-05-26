@@ -117,6 +117,24 @@ public class StudentsCache {
   }
 
   /**
+   * Returns the name of the student with the given id.
+   *
+   * @param id the id of the student
+   * @return the name of the student
+   */
+  public String getStudentName(String id) {
+    // Get the student
+    JSONObject student = (JSONObject) students.get(id);
+
+    // Get the name
+    String first_name = (String) student.get("first_name");
+    String last_name = (String) student.get("last_name");
+
+    // Return the name
+    return last_name + ", " + first_name;
+  }
+
+  /**
    * Returns the average of the student with the given id.
    *
    * @param id the id of the student
