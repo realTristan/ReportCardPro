@@ -39,6 +39,20 @@ public class StudentsCache {
   }
 
   /**
+   * Adds a student to the cache.
+   *
+   * @param name the name of the student to add
+   * @throws NoSuchAlgorithmException
+   */
+  public void reset() {
+    try {
+      students = Json.read("students.json");
+    } catch (Exception e) {
+      System.out.println(e);
+    }
+  }
+
+  /**
    * Returns a list of all the students in the cache.
    *
    * @return a list of JSONObjects representing the students
@@ -176,6 +190,7 @@ public class StudentsCache {
     JSONObject student = new JSONObject();
 
     // Name split
+    name = name.replaceAll(" ", "");
     String[] nameSplit = name.split(";");
 
     // Generate a random id
@@ -184,12 +199,12 @@ public class StudentsCache {
     // Create an array of couses
     List<Map<String, Object>> courses = new ArrayList<Map<String, Object>>();
     for (int i = 0; i < 4; i++) {
-      courses.add(Map.of("subject", "Subject", "grade", 0));
+      courses.add(Map.of("subject", "Subject", "grade", 0.0));
     }
 
     // Set the student properties
-    student.put("first_name", nameSplit[0]);
-    student.put("last_name", nameSplit[1]);
+    student.put("first_name", nameSplit[1]);
+    student.put("last_name", nameSplit[0]);
     student.put("id", id);
     student.put("courses", courses);
 

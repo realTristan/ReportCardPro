@@ -34,7 +34,7 @@ public class Listener {
    * @return true, if the event is valid
    */
   public static boolean isValidEvent(ActionEvent e) {
-    return e.getActionCommand().equals("Save Changes");
+    return e.getActionCommand().equals("Save");
   }
 
   /**

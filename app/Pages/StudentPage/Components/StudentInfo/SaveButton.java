@@ -21,7 +21,7 @@ public class SaveButton extends Button {
    */
   public SaveButton(Manager manager, Panel panel, String id, SubjectInput[] subjectInputs, GradeInput[] gradeInputs,
       StudentNameHeader studentNameHeader) {
-    super("Save Changes", 0, 0);
+    super("Save", 0, 0);
 
     // Add the button to the canvas
     panel.add(this);

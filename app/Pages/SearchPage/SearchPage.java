@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 import Pages.Manager;
+import Pages.SearchPage.Components.AddStudentButton;
 import Pages.SearchPage.Components.Footer;
 import Pages.SearchPage.Components.MainHeader;
 import Pages.SearchPage.Components.SearchHeader;
@@ -34,6 +35,7 @@ public class SearchPage extends JPanel {
 		new MainHeader(manager);
 		new SearchHeader(manager);
 		new Footer(manager);
+		new AddStudentButton(manager);
 
 		// Search Bar
 		StudentScrollPane scollPane = new StudentScrollPane(manager);

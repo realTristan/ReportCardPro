@@ -30,7 +30,7 @@ public class StudentPage extends JFrame {
     this.id = id;
     this.name = name;
     this.frame = new JFrame(id);
-    this.frame.setSize(300, 270);
+    this.frame.setSize(320, 270);
     this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     this.frame.setVisible(true);
   }
@@ -64,6 +64,7 @@ public class StudentPage extends JFrame {
       new CoursesAndGrades(manager, this, id, subjectInputs, gradeInputs);
 		  new SaveButton(manager, this, id, subjectInputs, gradeInputs, header);
       new PrintReport(manager, this, id);
+      new DeleteStudentButton(manager, this, id);
     }
 
     /**
