@@ -1,9 +1,10 @@
 package Pages.StudentPage.Components;
 
-import Components.Text.Text;
 import Pages.StudentPage.StudentPage.Panel;
 
 import java.awt.Font;
+
+import Components.Text;
 
 /**
  * A class for the student name header.

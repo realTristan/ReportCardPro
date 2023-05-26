@@ -2,8 +2,6 @@ package Components.Input;
 
 import javax.swing.JTextField;
 
-import Components.Text.PlaceholderListener;
-
 /**
  * A class for creating input fields.
  */

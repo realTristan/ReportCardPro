@@ -2,7 +2,7 @@ package Pages.SearchPage.Components;
 
 import java.awt.Font;
 
-import Components.Text.Text;
+import Components.Text;
 import Pages.Manager;
 
 /**
