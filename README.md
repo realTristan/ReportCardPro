@@ -5,6 +5,9 @@
 1. Add new student (pop-up) (dialog box with input)
 2. Remove a student
 
+3. Fix search scrolling
+4. Handle error if cannot convert grade to double, or there is no grade
+
 # License 
 MIT License
 
