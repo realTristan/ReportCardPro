@@ -21,28 +21,26 @@ public class AddStudentButton extends Button {
   public AddStudentButton(Manager manager) {
     super("Add Student", 250, 100);
     super.setSize(120, 30);
+    super.addActionListener(e -> this.onClick(manager));
+    manager.searchPage.add(this);
+  }
 
-    // Add action listener to the button
-    super.addActionListener(e -> {
+  /**
+   * Handles the button click event.
+   */
+  public void onClick(Manager manager) {
       Object res = this.getNameDialog();
       if (clickedCancel(res)) {
         return;
       }
       
-      // Get the name of the student
-      String name = (String) res;
-
       // Try adding the student to the cache
       try {
-        manager.cache.addStudent(name);
+        manager.cache.addStudent((String) res);
       } catch (NoSuchAlgorithmException err) {
         this.errorDialog();
       }
-    });
-
-    // Add the button to the canvas
-    manager.searchPage.add(this);
-  }
+    }
 
   /**
    * Displays an invalid name dialog.

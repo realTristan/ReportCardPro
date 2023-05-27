@@ -30,7 +30,7 @@ public class StudentPage extends JFrame {
     this.id = id;
     this.name = name;
     this.frame = new JFrame(id);
-    this.frame.setSize(320, 270);
+    this.frame.setSize(310, 270);
     this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     this.frame.setVisible(true);
   }

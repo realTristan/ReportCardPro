@@ -7,25 +7,43 @@ import Components.Button;
 import Pages.Manager;
 import Pages.StudentPage.StudentPage.Panel;
 
+/**
+ * Delete student button.
+ */
 public class DeleteStudentButton extends Button {
+  /**
+   * Constructs a new DeleteStudentButton object and adds it to the student page
+   * canvas.
+   *
+   * @param manager the manager to use for adding the button to the student page
+   *                canvas
+   */
   public DeleteStudentButton(Manager manager, Panel panel, JFrame frame, String id) {
     super("Delete Student", 0, 0);
-    super.addActionListener(e -> {
+    super.addActionListener(e -> this.onClick(manager, frame, id));
+    panel.add(this);
+  }
+
+  /**
+   * Handles the button click event.
+   */
+  public void onClick(Manager manager, JFrame frame, String id) {
+      // Get the id from the user
       Object res = this.getIdDialog(id);
       if (clickedCancel(res)) {
         return;
       }
 
       // If the id's match, delete the student
-      if (this.doIdsMatch(id, (String) res)) {
-        manager.cache.removeStudent(id);
-        frame.dispose();
-      } else {
+      if (!id.equals((String) res)) {
         this.errorDialog();
+        return;
       }
-    });
-    panel.add(this);
-  }
+
+      // Remove the student and dispose the frame
+      manager.cache.removeStudent(id);
+      frame.dispose();
+    }
 
   /**
    * Displays an error dialog.
@@ -56,7 +74,7 @@ public class DeleteStudentButton extends Button {
    * @param id2 the second id
    * @return true if the ids match, false otherwise
    */
-  public boolean doIdsMatch(String id1, String id2) {
+  public boolean idsMatch(String id1, String id2) {
     return id1.equals(id2);
   }
 
