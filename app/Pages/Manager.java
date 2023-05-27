@@ -10,7 +10,6 @@ import Pages.StudentPage.StudentPage;
  */
 public class Manager {
   public SearchPage searchPage;
-  public StudentPage studentPaged;
   public Lib.StudentsCache cache;
   public JFrame frame;
 

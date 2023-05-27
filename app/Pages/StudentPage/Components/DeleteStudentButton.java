@@ -12,7 +12,7 @@ public class DeleteStudentButton extends Button {
     super("Delete Student", 0, 0);
     super.addActionListener(e -> {
       Object res = this.getIdDialog(id);
-      if (res == null) {
+      if (clickedCancel(res)) {
         return;
       }
 
@@ -58,5 +58,15 @@ public class DeleteStudentButton extends Button {
    */
   public boolean doIdsMatch(String id1, String id2) {
     return id1.equals(id2);
+  }
+
+  /**
+   * Checks if the cancel button was clicked.
+   *
+   * @param res the result of the dialog
+   * @return true if the cancel button was clicked, false otherwise
+   */
+  public boolean clickedCancel(Object res) {
+    return res == null;
   }
 }

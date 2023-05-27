@@ -25,9 +25,9 @@ public class AddStudentButton extends Button {
     // Add action listener to the button
     super.addActionListener(e -> {
       Object res = this.getNameDialog();
-      if (res == null) {
+      if (clickedCancel(res)) {
         return;
-      } 
+      }
       
       // Get the name of the student
       String name = (String) res;
@@ -73,5 +73,15 @@ public class AddStudentButton extends Button {
         "Enter the student's name (last; first):",
         "Add Student",
         JOptionPane.PLAIN_MESSAGE);
+  }
+
+  /**
+   * Checks if the cancel button was clicked.
+   *
+   * @param res the result of the dialog
+   * @return true if the cancel button was clicked, false otherwise
+   */
+  public boolean clickedCancel(Object res) {
+    return res == null;
   }
 }
