@@ -28,22 +28,32 @@ public class DeleteStudentButton extends Button {
    * Handles the button click event.
    */
   public void onClick(Manager manager, JFrame frame, String id) {
-      // Get the id from the user
-      Object res = this.idDialog(id);
-      if (clickedCancel(res)) {
-        return;
-      }
-
-      // If the id's match, delete the student
-      if (!id.equals((String) res)) {
-        this.errorDialog();
-        return;
-      }
-
-      // Remove the student and dispose the frame
-      manager.cache.removeStudent(id);
-      frame.dispose();
+    // Get the id from the user
+    Object res = this.idDialog(id);
+    if (clickedCancel(res)) {
+      return;
     }
+
+    // If the id's match, delete the student
+    if (!id.equals((String) res)) {
+      this.errorDialog();
+      return;
+    }
+
+    // Remove the student and dispose the frame
+    manager.cache.removeStudent(id);
+    frame.dispose();
+  }
+
+  /**
+   * Checks if the cancel button was clicked.
+   *
+   * @param res the result of the dialog
+   * @return true if the cancel button was clicked, false otherwise
+   */
+  public boolean clickedCancel(Object res) {
+    return res == null;
+  }
 
   /**
    * Displays an error dialog.
@@ -65,15 +75,5 @@ public class DeleteStudentButton extends Button {
         "Type the student's ID to delete:\n" + id,
         "Are you sure?",
         JOptionPane.PLAIN_MESSAGE);
-  }
-
-  /**
-   * Checks if the cancel button was clicked.
-   *
-   * @param res the result of the dialog
-   * @return true if the cancel button was clicked, false otherwise
-   */
-  public boolean clickedCancel(Object res) {
-    return res == null;
   }
 }

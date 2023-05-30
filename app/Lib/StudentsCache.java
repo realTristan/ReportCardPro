@@ -53,22 +53,6 @@ public class StudentsCache {
   }
 
   /**
-   * Returns a list of all the students in the cache.
-   *
-   * @return a list of JSONObjects representing the students
-   */
-  public List<JSONObject> getAllStudents() {
-    // Create a new array
-    List<JSONObject> res = new ArrayList<JSONObject>();
-
-    // Iterate over the cache and add all the students
-    for (Object key : students.keySet()) {
-      res.add((JSONObject) students.get(key));
-    }
-    return res;
-  }
-
-  /**
    * Returns a list of students whose name starts with the given value.
    *
    * @param value the value to search for in the student names
