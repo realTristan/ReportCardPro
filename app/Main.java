@@ -5,6 +5,13 @@ import Pages.Manager;
 
 /**
  * The main class for the application.
+ * 
+ * 
+ * Test students:
+ * 1. wilcock, gary
+ * 2. simpson, tristan
+ * 
+ * 
  */
 class Main {
   public static void main(String[] args) {
