@@ -21,6 +21,9 @@ public class StudentScrollPane extends JScrollPane {
     // Set the location of the results list
     super.setLocation(65, 150);
 
+    // Set the size of the results list
+    super.setSize(300, 150);
+
     // Add the results list to the canvas
     manager.searchPage.add(this);
   }

@@ -29,7 +29,7 @@ public class DeleteStudentButton extends Button {
    */
   public void onClick(Manager manager, JFrame frame, String id) {
       // Get the id from the user
-      Object res = this.getIdDialog(id);
+      Object res = this.idDialog(id);
       if (clickedCancel(res)) {
         return;
       }
@@ -60,22 +60,11 @@ public class DeleteStudentButton extends Button {
    *
    * @return the id dialog result
    */
-  public Object getIdDialog(String id) {
+  public Object idDialog(String id) {
     return JOptionPane.showInputDialog(this,
         "Type the student's ID to delete:\n" + id,
         "Are you sure?",
         JOptionPane.PLAIN_MESSAGE);
-  }
-
-  /**
-   * Checks if the ids match.
-   *
-   * @param id1 the first id
-   * @param id2 the second id
-   * @return true if the ids match, false otherwise
-   */
-  public boolean idsMatch(String id1, String id2) {
-    return id1.equals(id2);
   }
 
   /**

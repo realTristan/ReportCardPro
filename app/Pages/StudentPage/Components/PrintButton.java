@@ -10,13 +10,13 @@ import Pages.StudentPage.StudentPage.Panel;
 /**
  * A class for creating buttons.
  */
-public class PrintReport extends Button {
+public class PrintButton extends Button {
   /**
    * Constructs a new PrintReport object.
    *
    * @param panel the panel to add the component to
    */
-  public PrintReport(Manager manager, Panel panel, String id) {
+  public PrintButton(Manager manager, Panel panel, String id) {
     super("Print", 0, 220);
     super.setSize(300, 30);
 

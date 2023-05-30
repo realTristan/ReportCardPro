@@ -29,26 +29,17 @@ public class AddStudentButton extends Button {
    * Handles the button click event.
    */
   public void onClick(Manager manager) {
-      Object res = this.getNameDialog();
-      if (clickedCancel(res)) {
-        return;
-      }
-      
-      // Try adding the student to the cache
-      try {
-        manager.cache.addStudent((String) res);
-      } catch (NoSuchAlgorithmException err) {
-        this.errorDialog();
-      }
+    Object res = this.nameDialog();
+    if (clickedCancel(res)) {
+      return;
     }
 
-  /**
-   * Displays an invalid name dialog.
-   */
-  public void invalidNameDialog() {
-    JOptionPane.showMessageDialog(this,
-        "Please enter a valid name.",
-        "Error", JOptionPane.ERROR_MESSAGE);
+    // Try adding the student to the cache
+    try {
+      manager.cache.addStudent((String) res);
+    } catch (NoSuchAlgorithmException err) {
+      this.errorDialog();
+    }
   }
 
   /**
@@ -65,7 +56,7 @@ public class AddStudentButton extends Button {
    *
    * @return the name dialog result
    */
-  public Object getNameDialog() {
+  public Object nameDialog() {
     // Pop up dialog to get the student's name (first and last)
     return JOptionPane.showInputDialog(this,
         "Enter the student's name (last; first):",

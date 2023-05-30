@@ -63,7 +63,7 @@ public class StudentPage extends JFrame {
       // Add the student info
       new CoursesAndGrades(manager, this, id, subjectInputs, gradeInputs);
 		  new SaveButton(manager, this, id, subjectInputs, gradeInputs, header);
-      new PrintReport(manager, this, id);
+      new PrintButton(manager, this, id);
       new DeleteStudentButton(manager, this, frame, id);
     }
 

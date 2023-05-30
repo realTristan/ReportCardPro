@@ -17,41 +17,40 @@ import Pages.SearchPage.Components.Search.SearchInput;
  * A class for creating search pages.
  */
 public class SearchPage extends JPanel {
-	/**
-	 * Constructs a new SearchPage object.
-	 */
-	public SearchPage() {
-		super();
-		super.setBackground(Color.WHITE);
-	}
+  /**
+   * Constructs a new SearchPage object.
+   */
+  public SearchPage() {
+    super();
+    super.setBackground(Color.WHITE);
+  }
 
-	/**
-	 * Sets the content of the search page.
-	 *
-	 * @param manager the manager to use for the search page
-	 */
-	public void setContent(Manager manager) {
-		// Text headers
-		new MainHeader(manager);
-		new SearchHeader(manager);
-		new Footer(manager);
-		new AddStudentButton(manager);
+  /**
+   * Sets the content of the search page.
+   *
+   * @param manager the manager to use for the search page
+   */
+  public void setContent(Manager manager) {
+    // Text headers
+    new MainHeader(manager);
+    new SearchHeader(manager);
+    new Footer(manager);
+    new AddStudentButton(manager);
 
-		// Search Bar
-		StudentScrollPane scollPane = new StudentScrollPane(manager);
-		scollPane.setSize(300, 150);
-		SearchInput searchInput = new SearchInput(manager);
+    // Search Bar
+    StudentScrollPane scollPane = new StudentScrollPane(manager);
+    SearchInput searchInput = new SearchInput(manager);
 
-		// Set the search input listener
-		searchInput.setListener(manager, scollPane);
-	}
+    // Set the search input listener
+    searchInput.setListener(manager, scollPane);
+  }
 
-	/**
-	 * Paints the components on the canvas.
-	 *
-	 * @param g the graphics object to use for painting
-	 */
-	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
-	}
+  /**
+   * Paints the components on the canvas.
+   *
+   * @param g the graphics object to use for painting
+   */
+  public void paintComponent(Graphics g) {
+    super.paintComponent(g);
+  }
 }
