@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { LaptopComponent } from './laptop/laptop.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavbarButtonComponent } from './navbar-button/navbar-button.component';
+import { FaqCardComponent } from './faq-card/faq-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LaptopComponent,
     NavbarComponent,
-    NavbarButtonComponent
+    NavbarButtonComponent,
+    FaqCardComponent
   ],
   imports: [
     BrowserModule
