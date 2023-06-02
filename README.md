@@ -1,9 +1,6 @@
 # Report Card Pro ![Stars](https://img.shields.io/github/stars/realTristan/ReportCardPro?color=brightgreen) ![Watchers](https://img.shields.io/github/watchers/realTristan/ReportCardPro?label=Watchers)
 <img width="1214" alt="Screenshot 2023-05-25 at 9 05 30 PM" src="https://github.com/realTristan/ReportCardPro/assets/75189508/8887de4b-afd0-4d86-999c-d17fab474c16">
 
-# To do
-1. Fix search scrolling
-
 # License 
 MIT License
 
