@@ -1,0 +1,88 @@
+<!-- Navbar -->
+<div id="home"></div>
+<app-navbar></app-navbar>
+
+<!-- Hero -->
+<div class="flex justify-center items-center mt-16">
+  <h2 class="text-5xl font-black text-slate-800 px-24 md:px-40 tracking-wide leading-normal text-center">
+    Easy-to-use grading interface designed for teachers.
+  </h2>
+</div>
+<div class="flex justify-center items-center">
+  <p class="font-normal text-xl px-24 md:px-56 text-center">
+    <strong>Grading made easy.</strong> Manually inserting marks into a spreadsheet is a thing of the past. With Report
+    Card Pro you can <strong>easily manage</strong> report cards with just a few clicks. <strong>Add, Delete, and
+    Update</strong> students and their grades. <strong>Save time</strong> and <strong>reduce stress.</strong>
+  </p>
+</div>
+
+<div class="flex justify-center items-center">
+  <img src="assets/images/preview.png" class="mt-10 w-[50rem] h-[28rem]">
+</div>
+
+<!-- Download -->
+<div class="flex justify-center items-center mt-16" id="install">
+  <h2 class="text-5xl font-black text-slate-800 px-24 md:px-40 tracking-wide leading-normal text-center">
+    Download Now
+  </h2>
+</div>
+<div class="flex justify-center items-center">
+  <p class="font-normal text-xl px-24 md:px-56 text-center">
+    Report Card Pro is <strong>free, light-weight,</strong> and <strong>multi-OS</strong>. It's user-interface and
+    functions were designed in Java. Get started with
+    Report Card Pro today! Download the latest version below.
+  </p>
+</div>
+<div class="flex justify-center items-center mt-6">
+  <a href="https://github.com/realTristan/ICS4UI_Final"
+    class="bg-slate-900 text-white px-7 py-4 rounded-lg text-center text-extrabold hover:bg-slate-200 hover:shadow-sm hover:text-slate-900">
+    Download
+  </a>
+</div>
+
+<!-- FAQ -->
+<div class="flex justify-center items-center mt-16" id="faq">
+  <h2 class="text-5xl font-black text-slate-800 px-24 md:px-40 tracking-wide leading-normal text-center">
+    Frequently Asked Questions
+  </h2>
+</div>
+<div class="flex justify-center items-center">
+  <p class="font-normal text-xl px-24 md:px-56 text-center">
+    Report Card Pro is easy-to-use, but that doesn't mean we're not here to help. Here are just a few of the
+    questions we get asked the most.
+  </p>
+</div>
+<div class="flex justify-center items-center mt-5">
+  <div class="lg:flex">
+    <app-faq-card question="How do I install Report Card Pro?"
+    answer="Download the latest version from our github!"></app-faq-card>
+  <app-faq-card question="How do I use Report Card Pro?"
+    answer="All information as to how you can use Report Card Pro can be found in the manual!"></app-faq-card>
+  <app-faq-card question="How do I report a bug?"
+    answer="Report Card Pro is open-sourced, so you can report bugs on our github!"></app-faq-card>
+  </div>
+</div>
+
+<!-- Github -->
+<div class="flex justify-center items-center mt-32" id="github">
+  <h2 class="text-5xl font-black text-slate-800 px-24 md:px-40 tracking-wide leading-normal text-center">
+    Find us on Github!
+  </h2>
+</div>
+<div class="flex justify-center items-center mb-10">
+  <p class="font-normal text-xl px-24 md:px-56 text-center"><strong>Transparency leads to success.</strong> Worried
+    about
+    bugs or malicious intent? Then check out our github, everything is all <strong>open-sourced!</strong> Click the
+    laptop or <a href="https://github.com/realTristan/ICS4UI_Final" class="text-blue-500 hover:underline">here</a> to
+    visit.</p>
+</div>
+<app-laptop></app-laptop>
+
+<!-- Spacer -->
+<div class="my-20"></div>
+
+
+<!-- 
+  ng build --base-href "https://realtristan.github.io/ReportCardPro/" 
+  npx angular-cli-ghpages --dir=dist/reportcardpro
+-->
