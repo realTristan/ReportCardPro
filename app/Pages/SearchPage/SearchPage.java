@@ -17,6 +17,8 @@ import Pages.SearchPage.Components.Search.SearchInput;
  * A class for creating search pages.
  */
 public class SearchPage extends JPanel {
+  public SearchInput searchInput;
+
   /**
    * Constructs a new SearchPage object.
    */
@@ -39,10 +41,10 @@ public class SearchPage extends JPanel {
 
     // Search Bar
     StudentScrollPane scollPane = new StudentScrollPane(manager);
-    SearchInput searchInput = new SearchInput(manager);
+    this.searchInput = new SearchInput(manager);
 
     // Set the search input listener
-    searchInput.setListener(manager, scollPane);
+    this.searchInput.setListener(manager, scollPane);
   }
 
   /**

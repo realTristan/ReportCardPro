@@ -39,20 +39,6 @@ public class StudentsCache {
   }
 
   /**
-   * Adds a student to the cache.
-   *
-   * @param name the name of the student to add
-   * @throws NoSuchAlgorithmException
-   */
-  public void reset() {
-    try {
-      students = Json.read("students.json");
-    } catch (Exception e) {
-      System.out.println(e);
-    }
-  }
-
-  /**
    * Returns a list of students whose name starts with the given value.
    *
    * @param value the value to search for in the student names
@@ -169,7 +155,7 @@ public class StudentsCache {
    *
    * @param name the name of the student
    */
-  public void addStudent(String name) throws NoSuchAlgorithmException {
+  public String addStudent(String name) throws NoSuchAlgorithmException {
     // Create the student
     JSONObject student = new JSONObject();
 
@@ -197,5 +183,8 @@ public class StudentsCache {
 
     // Export the cache
     this.export();
+
+    // Return the id
+    return id;
   }
 }

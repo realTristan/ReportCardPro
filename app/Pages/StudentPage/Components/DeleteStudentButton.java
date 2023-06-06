@@ -42,6 +42,11 @@ public class DeleteStudentButton extends Button {
 
     // Remove the student and dispose the frame
     manager.cache.removeStudent(id);
+
+    // Clear the search page search input
+    manager.searchPage.searchInput.clear();
+
+    // Dispose the student page frame
     frame.dispose();
   }
 

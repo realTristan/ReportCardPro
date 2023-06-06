@@ -27,7 +27,15 @@ public class SearchInput extends Input {
     super.setSize(190, 30);
 
     // Add the input to the canvas
-    manager.searchPage.add(this);
+    manager.searchPage.searchInput = this;
+    manager.searchPage.add(manager.searchPage.searchInput);
+  }
+
+  /**
+   * Clears the search input.
+   */
+  public void clear() {
+    this.setText("");
   }
 
   /**

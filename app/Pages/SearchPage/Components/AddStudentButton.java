@@ -34,9 +34,13 @@ public class AddStudentButton extends Button {
       return;
     }
 
+    // Get the students name
+    String name = (String) res;
+
     // Try adding the student to the cache
     try {
-      manager.cache.addStudent((String) res);
+      String id = manager.cache.addStudent(name);
+      manager.openStudentPage(id, name);
     } catch (NoSuchAlgorithmException err) {
       this.errorDialog();
     }
