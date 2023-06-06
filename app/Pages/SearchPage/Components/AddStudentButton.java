@@ -30,7 +30,7 @@ public class AddStudentButton extends Button {
    */
   public void onClick(Manager manager) {
     Object res = this.nameDialog();
-    if (clickedCancel(res)) {
+    if (this.clickedCancel(res)) {
       return;
     }
 

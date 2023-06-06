@@ -30,7 +30,7 @@ public class DeleteStudentButton extends Button {
   public void onClick(Manager manager, JFrame frame, String id) {
     // Get the id from the user
     Object res = this.idDialog(id);
-    if (clickedCancel(res)) {
+    if (this.clickedCancel(res)) {
       return;
     }
 
