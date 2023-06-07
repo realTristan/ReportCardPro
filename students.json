@@ -1,1 +1,24 @@
-{"8fe3762068b74fb609748ea259b73120d40c4687":{"courses":[{"subject":"Subject","grade":0.0},{"subject":"Subject","grade":0.0},{"subject":"Subject","grade":0.0},{"subject":"Subject","grade":0.0}],"last_name":"grimes","id":"8fe3762068b74fb609748ea259b73120d40c4687","first_name":"rick"},"5491c2895745749b437d63716efd60077b7eefdb":{"courses":[{"subject":"Subject","grade":0.0},{"subject":"Subject","grade":0.0},{"subject":"Subject","grade":0.0},{"subject":"Subject","grade":0.0}],"last_name":"nunes","id":"5491c2895745749b437d63716efd60077b7eefdb","first_name":"halle"},"f3cffe477b0c96dcf3a70732a2c80e493b4ba96d":{"courses":[{"subject":"math","grade":92.0},{"subject":"chemistry","grade":100.0},{"subject":"calculus","grade":95.0},{"subject":"english","grade":93.0}],"last_name":"simpson","id":"f3cffe477b0c96dcf3a70732a2c80e493b4ba96d","first_name":"tristan"},"43f10bdfba2f3cdce6b596fb71077d1df321c213":{"courses":[{"subject":"math","grade":93.0},{"subject":"english","grade":84.0},{"subject":"science","grade":95.0},{"subject":"history","grade":96.0}],"last_name":"wilcock","id":"43f10bdfba2f3cdce6b596fb71077d1df321c213","first_name":"gary"}}
+{
+  "f3cffe477b0c96dcf3a70732a2c80e493b4ba96d": {
+    "courses": [
+      { "subject": "math", "grade": 92.0 },
+      { "subject": "chemistry", "grade": 100.0 },
+      { "subject": "calculus", "grade": 95.0 },
+      { "subject": "english", "grade": 93.0 }
+    ],
+    "last_name": "simpson",
+    "id": "f3cffe477b0c96dcf3a70732a2c80e493b4ba96d",
+    "first_name": "tristan"
+  },
+  "43f10bdfba2f3cdce6b596fb71077d1df321c213": {
+    "courses": [
+      { "subject": "math", "grade": 93.0 },
+      { "subject": "english", "grade": 84.0 },
+      { "subject": "science", "grade": 95.0 },
+      { "subject": "history", "grade": 96.0 }
+    ],
+    "last_name": "wilcock",
+    "id": "43f10bdfba2f3cdce6b596fb71077d1df321c213",
+    "first_name": "gary"
+  }
+}
