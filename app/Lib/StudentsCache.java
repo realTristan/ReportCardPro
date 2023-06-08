@@ -166,6 +166,9 @@ public class StudentsCache {
     // Name split
     name = name.replaceAll(" ", "");
     String[] nameSplit = name.split(";");
+    if (nameSplit.length != 2) {
+      throw new IllegalArgumentException("Invalid name");
+    }
 
     // Generate a random id
     String id = Utils.Encoding.SHA1();
