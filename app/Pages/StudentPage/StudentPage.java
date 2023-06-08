@@ -15,7 +15,10 @@ import Pages.StudentPage.Components.StudentInfo.SaveButton;
  * A class for creating student pages.
  */
 public class StudentPage extends JFrame {
+  // The frame to use for the student page
   public JFrame frame;
+
+  // The student's id and name
   public String id;
   public String name;
 

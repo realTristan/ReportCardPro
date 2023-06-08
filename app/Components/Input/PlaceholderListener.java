@@ -8,7 +8,10 @@ import java.awt.event.FocusListener;
  * A class for creating placeholder listeners.
  */
 public class PlaceholderListener implements FocusListener {
+  // The input to add the listener to
     private Input input;
+
+    // The placeholder text to use
     private String placeholder;
 
     /**

@@ -13,7 +13,8 @@ import Utils.Json;
  * A class for caching students.
  */
 public class StudentsCache {
-  public JSONObject students = new JSONObject();
+  // The cache of students
+  private JSONObject students = new JSONObject();
 
   /**
    * Constructs a new Cache object and initializes it with the contents of the
@@ -146,7 +147,10 @@ public class StudentsCache {
    * @return a JSONObject representing the student
    */
   public void removeStudent(String id) {
+    // Remove the student
     students.remove(id);
+
+    // Export the cache data to the json file
     this.export();
   }
 

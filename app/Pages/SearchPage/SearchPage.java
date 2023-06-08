@@ -17,6 +17,8 @@ import Pages.SearchPage.Components.Search.SearchInput;
  * A class for creating search pages.
  */
 public class SearchPage extends JPanel {
+  // The search input component. We store this here so that
+  // When an user is deleted, we can reset the search input
   public SearchInput searchInput;
 
   /**

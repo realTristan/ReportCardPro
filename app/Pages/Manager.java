@@ -9,8 +9,13 @@ import Pages.StudentPage.StudentPage;
  * A class for managing pages.
  */
 public class Manager {
+  // The search page component
   public SearchPage searchPage;
+
+  // The cache of students
   public Lib.StudentsCache cache;
+
+  // The main frame to use for the manager
   public JFrame frame;
 
   /**
