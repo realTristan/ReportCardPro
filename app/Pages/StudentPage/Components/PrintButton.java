@@ -1,11 +1,11 @@
-package Pages.StudentPage.Components;
+package pages.studentPage.components;
 
 import java.util.List;
 import java.util.Map;
 
-import Components.Button;
-import Pages.Manager;
-import Pages.StudentPage.StudentPage.Panel;
+import components.Button;
+import pages.Manager;
+import pages.studentPage.StudentPage.Panel;
 
 /**
  * A class for creating buttons.

@@ -1,9 +1,9 @@
-package Pages;
+package pages;
 
 import javax.swing.JFrame;
 
-import Pages.SearchPage.SearchPage;
-import Pages.StudentPage.StudentPage;
+import pages.searchPage.SearchPage;
+import pages.studentPage.StudentPage;
 
 /**
  * A class for managing pages.
@@ -13,7 +13,7 @@ public class Manager {
   public SearchPage searchPage;
 
   // The cache of students
-  public Lib.StudentsCache cache;
+  public lib.Cache cache;
 
   // The main frame to use for the manager
   public JFrame frame;
@@ -24,7 +24,7 @@ public class Manager {
    * @param frame the frame to use for the manager
    * @param cache the cache to use for the manager
    */
-  public Manager(JFrame frame, Lib.StudentsCache cache) {
+  public Manager(JFrame frame, lib.Cache cache) {
     this.cache = cache;
     this.frame = frame;
     this.setSearchPage();

@@ -1,4 +1,4 @@
-package Lib;
+package lib;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
@@ -7,12 +7,12 @@ import java.util.Map;
 
 import org.json.simple.JSONObject;
 
-import Utils.Json;
+import utils.Json;
 
 /**
  * A class for caching students.
  */
-public class StudentsCache {
+public class Cache {
   // The cache of students
   private JSONObject students = new JSONObject();
 
@@ -20,7 +20,7 @@ public class StudentsCache {
    * Constructs a new Cache object and initializes it with the contents of the
    * "students.json" file.
    */
-  public StudentsCache() {
+  public Cache() {
     try {
       students = Json.read("students.json");
     } catch (Exception e) {
@@ -171,7 +171,7 @@ public class StudentsCache {
     }
 
     // Generate a random id
-    String id = Utils.Encoding.SHA1();
+    String id = utils.Encoding.SHA1();
 
     // Create an array of couses
     List<Map<String, Object>> courses = new ArrayList<Map<String, Object>>();

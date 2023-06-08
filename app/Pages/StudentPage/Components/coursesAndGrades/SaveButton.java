@@ -1,11 +1,11 @@
-package Pages.StudentPage.Components.StudentInfo;
+package pages.studentPage.components.coursesAndGrades;
 
-import Components.Button;
-import Pages.Manager;
-import Pages.StudentPage.Components.SubjectInput;
-import Pages.StudentPage.Components.GradeInput;
-import Pages.StudentPage.Components.StudentNameHeader;
-import Pages.StudentPage.StudentPage.Panel;
+import components.Button;
+import pages.Manager;
+import pages.studentPage.StudentPage.Panel;
+import pages.studentPage.components.GradeInput;
+import pages.studentPage.components.StudentNameHeader;
+import pages.studentPage.components.SubjectInput;
 
 /**
  * A class for creating buttons.
@@ -28,8 +28,8 @@ public class SaveButton extends Button {
 
     // Button click listener
     this.addActionListener(e -> {
-      if (Listener.isValidEvent(e)) {
-        Listener.onClick(manager, id, subjectInputs, gradeInputs);
+      if (ButtonListener.isValidEvent(e)) {
+        ButtonListener.onClick(manager, id, subjectInputs, gradeInputs);
         studentNameHeader.update(manager, id);
       }
     });

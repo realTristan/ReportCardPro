@@ -1,10 +1,10 @@
-package Pages.SearchPage.Components.Search;
+package pages.searchPage.components.search;
 
 import java.util.List;
 
 import org.json.simple.JSONObject;
 
-import Pages.Manager;
+import pages.Manager;
 
 /**
  * A class for managing the students in the results list.

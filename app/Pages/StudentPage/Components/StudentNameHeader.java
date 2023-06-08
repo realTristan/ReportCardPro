@@ -1,11 +1,10 @@
-package Pages.StudentPage.Components;
+package pages.studentPage.components;
 
-import Pages.Manager;
-import Pages.StudentPage.StudentPage.Panel;
+import components.Text;
+import pages.Manager;
+import pages.studentPage.StudentPage.Panel;
 
 import java.awt.Font;
-
-import Components.Text;
 
 /**
  * A class for the student name header.

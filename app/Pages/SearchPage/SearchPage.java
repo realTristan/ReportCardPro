@@ -1,17 +1,17 @@
-package Pages.SearchPage;
+package pages.searchPage;
 
 import java.awt.Color;
 import java.awt.Graphics;
 
 import javax.swing.JPanel;
 
-import Pages.Manager;
-import Pages.SearchPage.Components.AddStudentButton;
-import Pages.SearchPage.Components.Footer;
-import Pages.SearchPage.Components.MainHeader;
-import Pages.SearchPage.Components.SearchHeader;
-import Pages.SearchPage.Components.Search.StudentScrollPane;
-import Pages.SearchPage.Components.Search.SearchInput;
+import pages.Manager;
+import pages.searchPage.components.AddStudentButton;
+import pages.searchPage.components.Footer;
+import pages.searchPage.components.MainHeader;
+import pages.searchPage.components.SearchHeader;
+import pages.searchPage.components.search.SearchInput;
+import pages.searchPage.components.search.StudentScrollPane;
 
 /**
  * A class for creating search pages.

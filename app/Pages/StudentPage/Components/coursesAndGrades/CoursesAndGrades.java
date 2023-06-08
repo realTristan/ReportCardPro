@@ -1,12 +1,12 @@
-package Pages.StudentPage.Components.StudentInfo;
+package pages.studentPage.components.coursesAndGrades;
 
 import java.util.List;
 import java.util.Map;
 
-import Pages.Manager;
-import Pages.StudentPage.Components.SubjectInput;
-import Pages.StudentPage.Components.GradeInput;
-import Pages.StudentPage.StudentPage.Panel;
+import pages.Manager;
+import pages.studentPage.StudentPage.Panel;
+import pages.studentPage.components.GradeInput;
+import pages.studentPage.components.SubjectInput;
 
 /**
  * A class for the save button.

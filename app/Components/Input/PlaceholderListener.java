@@ -1,4 +1,4 @@
-package Components.Input;
+package components.input;
 
 import java.awt.Color;
 import java.awt.event.FocusEvent;

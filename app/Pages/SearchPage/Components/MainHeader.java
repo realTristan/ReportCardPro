@@ -1,9 +1,9 @@
-package Pages.SearchPage.Components;
+package pages.searchPage.components;
 
 import java.awt.Font;
 
-import Components.Text;
-import Pages.Manager;
+import components.Text;
+import pages.Manager;
 
 /**
  * A class for creating the main header

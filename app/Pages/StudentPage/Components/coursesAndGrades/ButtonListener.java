@@ -1,4 +1,4 @@
-package Pages.StudentPage.Components.StudentInfo;
+package pages.studentPage.components.coursesAndGrades;
 
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
@@ -6,14 +6,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import Pages.Manager;
-import Pages.StudentPage.Components.SubjectInput;
-import Pages.StudentPage.Components.GradeInput;
+import pages.Manager;
+import pages.studentPage.components.GradeInput;
+import pages.studentPage.components.SubjectInput;
 
 /**
  * A class for the save button listener.
  */
-public class Listener {
+public class ButtonListener {
   /**
    * Constructs a new Listener object.
    *
@@ -24,7 +24,7 @@ public class Listener {
    */
   public static void onClick(Manager manager, String id, SubjectInput[] subjectInputs, GradeInput[] gradeInputs) {
     manager.cache.updateStudentCourses(id,
-        Listener.mergeToMapList(subjectInputs, gradeInputs));
+        ButtonListener.mergeToMapList(subjectInputs, gradeInputs));
   }
 
   /**

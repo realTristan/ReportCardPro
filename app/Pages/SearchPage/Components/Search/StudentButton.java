@@ -1,7 +1,7 @@
-package Pages.SearchPage.Components.Search;
+package pages.searchPage.components.search;
 
-import Components.Button;
-import Pages.Manager;
+import components.Button;
+import pages.Manager;
 
 /**
  * A class for creating buttons.

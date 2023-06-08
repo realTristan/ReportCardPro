@@ -1,8 +1,8 @@
-package Pages.SearchPage.Components.Search;
+package pages.searchPage.components.search;
 
 import javax.swing.JScrollPane;
 
-import Pages.Manager;
+import pages.Manager;
 
 /**
  * A class representing a list of results.

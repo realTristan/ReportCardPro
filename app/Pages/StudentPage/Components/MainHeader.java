@@ -1,9 +1,9 @@
-package Pages.StudentPage.Components;
+package pages.studentPage.components;
 
 import java.awt.Font;
 
-import Components.Text;
-import Pages.StudentPage.StudentPage.Panel;
+import components.Text;
+import pages.studentPage.StudentPage.Panel;
 
 /**
  * A class for creating the main header

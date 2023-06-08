@@ -1,11 +1,11 @@
-package Pages.SearchPage.Components;
+package pages.searchPage.components;
 
 import java.security.NoSuchAlgorithmException;
 
 import javax.swing.JOptionPane;
 
-import Components.Button;
-import Pages.Manager;
+import components.Button;
+import pages.Manager;
 
 /**
  * A class for creating buttons.

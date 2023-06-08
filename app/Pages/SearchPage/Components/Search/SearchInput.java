@@ -1,10 +1,10 @@
-package Pages.SearchPage.Components.Search;
+package pages.searchPage.components.search;
 
 import javax.swing.event.DocumentEvent;
 
-import Components.Input.Input;
-import Components.Input.InputListener;
-import Pages.Manager;
+import components.input.Input;
+import components.input.InputListener;
+import pages.Manager;
 
 /**
  * A class for creating search inputs.

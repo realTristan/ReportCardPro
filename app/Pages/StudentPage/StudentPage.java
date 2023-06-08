@@ -1,4 +1,4 @@
-package Pages.StudentPage;
+package pages.studentPage;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -6,10 +6,10 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import Pages.Manager;
-import Pages.StudentPage.Components.*;
-import Pages.StudentPage.Components.StudentInfo.CoursesAndGrades;
-import Pages.StudentPage.Components.StudentInfo.SaveButton;
+import pages.Manager;
+import pages.studentPage.components.*;
+import pages.studentPage.components.coursesAndGrades.CoursesAndGrades;
+import pages.studentPage.components.coursesAndGrades.SaveButton;
 
 /**
  * A class for creating student pages.

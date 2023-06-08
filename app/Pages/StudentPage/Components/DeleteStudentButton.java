@@ -1,11 +1,11 @@
-package Pages.StudentPage.Components;
+package pages.studentPage.components;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import Components.Button;
-import Pages.Manager;
-import Pages.StudentPage.StudentPage.Panel;
+import components.Button;
+import pages.Manager;
+import pages.studentPage.StudentPage.Panel;
 
 /**
  * Delete student button.

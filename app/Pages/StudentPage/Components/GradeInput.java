@@ -1,7 +1,7 @@
-package Pages.StudentPage.Components;
+package pages.studentPage.components;
 
-import Components.Input.Input;
-import Pages.StudentPage.StudentPage.Panel;
+import components.input.Input;
+import pages.studentPage.StudentPage.Panel;
 
 /**
  * A class for grade input
