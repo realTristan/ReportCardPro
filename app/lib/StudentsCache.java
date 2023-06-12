@@ -12,7 +12,7 @@ import utils.Json;
 /**
  * A class for caching students.
  */
-public class Cache {
+public class StudentsCache {
   // The cache of students
   private JSONObject students = new JSONObject();
 
@@ -20,7 +20,7 @@ public class Cache {
    * Constructs a new Cache object and initializes it with the contents of the
    * "students.json" file.
    */
-  public Cache() {
+  public StudentsCache() {
     try {
       students = Json.read("students.json");
     } catch (Exception e) {
@@ -73,10 +73,10 @@ public class Cache {
   }
 
   /**
-   * Returns the student with the given id.
+   * Update the student courses
    *
    * @param id the id of the student
-   * @return a JSONObject representing the student
+   * @param subjects the list of subject maps
    */
   public void updateStudentCourses(String id, List<Map<String, Object>> subjects) {
     // Get the student
@@ -141,10 +141,9 @@ public class Cache {
   }
 
   /**
-   * Returns the student with the given id.
+   * Delete the student with the given id.
    *
    * @param id the id of the student
-   * @return a JSONObject representing the student
    */
   public void deleteStudent(String id) {
     // delete the student

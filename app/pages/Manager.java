@@ -13,7 +13,7 @@ public class Manager {
   public SearchPage searchPage;
 
   // The cache of students
-  public lib.Cache cache;
+  public lib.StudentsCache cache;
 
   // The main frame to use for the manager
   public JFrame frame;
@@ -24,7 +24,7 @@ public class Manager {
    * @param frame the frame to use for the manager
    * @param cache the cache to use for the manager
    */
-  public Manager(JFrame frame, lib.Cache cache) {
+  public Manager(JFrame frame, lib.StudentsCache cache) {
     this.cache = cache;
     this.frame = frame;
     this.setSearchPage();

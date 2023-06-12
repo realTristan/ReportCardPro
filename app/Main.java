@@ -1,6 +1,6 @@
 import javax.swing.JFrame;
 
-import lib.Cache;
+import lib.StudentsCache;
 import pages.Manager;
 
 /**
@@ -19,7 +19,7 @@ class Main {
     JFrame frame = new JFrame("Report Card Pro");
 
     // Initialize the cache
-    Cache cache = new Cache();
+    StudentsCache cache = new StudentsCache();
 
     // Init page manager
     new Manager(frame, cache);
