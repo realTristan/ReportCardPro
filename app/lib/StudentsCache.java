@@ -1,6 +1,5 @@
 package lib;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -158,7 +157,7 @@ public class StudentsCache {
    *
    * @param name the name of the student
    */
-  public String addStudent(String name) throws NoSuchAlgorithmException {
+  public String addStudent(String name) throws Exception {
     // Create the student
     JSONObject student = new JSONObject();
 

@@ -1,7 +1,5 @@
 package pages.searchPage.components;
 
-import java.security.NoSuchAlgorithmException;
-
 import javax.swing.JOptionPane;
 
 import components.Button;
@@ -41,7 +39,7 @@ public class AddStudentButton extends Button {
     try {
       String id = manager.cache.addStudent(name);
       manager.openStudentPage(id, name);
-    } catch (NoSuchAlgorithmException err) {
+    } catch (Exception err) {
       this.errorDialog();
     }
   }
