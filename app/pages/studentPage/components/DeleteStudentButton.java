@@ -40,8 +40,8 @@ public class DeleteStudentButton extends Button {
       return;
     }
 
-    // Remove the student and dispose the frame
-    manager.cache.removeStudent(id);
+    // Delete the student and dispose the frame
+    manager.cache.deleteStudent(id);
 
     // Clear the search page search input
     manager.searchPage.searchInput.clear();

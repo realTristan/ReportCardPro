@@ -146,8 +146,8 @@ public class Cache {
    * @param id the id of the student
    * @return a JSONObject representing the student
    */
-  public void removeStudent(String id) {
-    // Remove the student
+  public void deleteStudent(String id) {
+    // delete the student
     students.remove(id);
 
     // Export the cache data to the json file
