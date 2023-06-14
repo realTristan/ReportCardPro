@@ -13,8 +13,7 @@ public class AddStudentButton extends Button {
    * Constructs a new NewStudentButton object and adds it to the search page
    * canvas.
    *
-   * @param manager the manager to use for adding the button to the search page
-   *                canvas
+   * @param manager the page manager
    */
   public AddStudentButton(Manager manager) {
     super("Add Student", 250, 100);
@@ -25,6 +24,7 @@ public class AddStudentButton extends Button {
 
   /**
    * Handles the button click event.
+   * @return void
    */
   public void onClick(Manager manager) {
     Object res = this.nameDialog();
@@ -46,6 +46,7 @@ public class AddStudentButton extends Button {
 
   /**
    * Displays an error dialog.
+   * @return void
    */
   public void errorDialog() {
     JOptionPane.showMessageDialog(this,

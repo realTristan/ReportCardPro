@@ -15,8 +15,10 @@ public class DeleteStudentButton extends Button {
    * Constructs a new DeleteStudentButton object and adds it to the student page
    * canvas.
    *
-   * @param manager the manager to use for adding the button to the student page
-   *                canvas
+   * @param manager the page manager
+   * @param panel the panel to use for adding the button to the student page
+   * @param frame the frame to dispose
+   * @param id the student id
    */
   public DeleteStudentButton(Manager manager, Panel panel, JFrame frame, String id) {
     super("Delete Student", 0, 0);
@@ -26,6 +28,10 @@ public class DeleteStudentButton extends Button {
 
   /**
    * Handles the button click event.
+   * @param manager the page manager
+   * @param frame the frame to dispose
+   * @param id the student id
+   * @return void
    */
   public void onClick(Manager manager, JFrame frame, String id) {
     // Get the id from the user
@@ -62,6 +68,7 @@ public class DeleteStudentButton extends Button {
 
   /**
    * Displays an error dialog.
+   * @return void
    */
   public void errorDialog() {
     JOptionPane.showMessageDialog(this,
@@ -73,6 +80,7 @@ public class DeleteStudentButton extends Button {
   /**
    * The student id dialog.
    *
+   * @param id the student id
    * @return the id dialog result
    */
   public Object idDialog(String id) {

@@ -13,8 +13,7 @@ public class Footer extends Text {
    * Constructs a new Footer object and adds it to the search page canvas at the
    * specified location and size.
    *
-   * @param manager the manager to use for adding the footer to the search page
-   *                canvas
+   * @param manager the page manager
    */
   public Footer(Manager manager) {
     super("v1.0.0 made by Tristan, Jagger, Jett", 198, 330);

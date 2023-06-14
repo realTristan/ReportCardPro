@@ -41,7 +41,8 @@ public class StudentPage extends JFrame {
   /**
    * Sets the content of the student page.
    *
-   * @param manager the manager to use for the student page
+   * @param manager the page manager
+   * @return void
    */
   public void setContent(Manager manager) {
     this.frame.setContentPane(new Panel(manager));
@@ -74,6 +75,7 @@ public class StudentPage extends JFrame {
      * Paints the components on the canvas.
      *
      * @param g the graphics object to use for painting
+     * @return void
      */
     public void paintComponent(Graphics g) {
       super.paintComponent(g);

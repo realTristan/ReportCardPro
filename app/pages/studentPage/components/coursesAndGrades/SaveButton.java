@@ -15,9 +15,11 @@ public class SaveButton extends Button {
    * Constructs a new SaveButton object and sets its bounds to the specified
    * location and size.
    *
-   * @param panel the manager to use for adding the button to the canvas
-   * @param x     the x-coordinate of the button
-   * @param y     the y-coordinate of the button
+   * @param manager the page manager
+   * @param panel the panel to use for adding the button to the canvas
+   * @param id the id of the student
+   * @param subjectInputs the subject inputs
+   * @param gradeInputs the grade inputs
    */
   public SaveButton(Manager manager, Panel panel, String id, SubjectInput[] subjectInputs, GradeInput[] gradeInputs,
       StudentNameHeader studentNameHeader) {

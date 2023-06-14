@@ -15,9 +15,11 @@ public class CoursesAndGrades {
 	/**
 	 * Constructs a new SaveButtonList object.
 	 *
-	 * @param panel   the manager to use for adding the button to the canvas
-	 * @param manager the manager to use for the student page
-	 * @param id      the id of the student
+	 * @param manager        the page manager
+	 * @param panel          the panel to use for adding the button to the canvas
+	 * @param id             the id of the student
+	 * @param subjectInputs  the subject inputs
+	 * @param gradeInputs    the grade inputs
 	 */
 	public CoursesAndGrades(Manager manager, Panel panel, String id, SubjectInput[] subjectInputs, GradeInput[] gradeInputs) {
 		// Get the student courses

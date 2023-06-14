@@ -12,8 +12,7 @@ public class StudentScrollPane extends JScrollPane {
    * Constructs a new ResultsList object and adds it to the search page canvas at
    * the specified location.
    *
-   * @param manager the manager to use for adding the results list to the search
-   *                page canvas
+   * @param manager the page manager
    */
   public StudentScrollPane(Manager manager) {
     super();
@@ -31,8 +30,9 @@ public class StudentScrollPane extends JScrollPane {
   /**
    * Sets the students in the results list.
    *
-   * @param manager the manager to use for getting the students
+   * @param manager the page manager
    * @param value   the value to use for filtering the students
+   * @return void
    */
   public void updateStudentList(Manager manager, String value) {
     StudentButtonList.updateList(manager, this, value);

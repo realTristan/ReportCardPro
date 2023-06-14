@@ -32,6 +32,7 @@ public class Manager {
 
   /**
    * Removes the search page from the content pane.
+   * @return void
    */
   private void setSearchPage() {
     this.searchPage = new SearchPage();
@@ -41,6 +42,7 @@ public class Manager {
 
   /**
    * Adds the student page to the content pane.
+   * @return void
    */
   public void openStudentPage(String id, String name) {
     StudentPage studentPage = new StudentPage(id, name);

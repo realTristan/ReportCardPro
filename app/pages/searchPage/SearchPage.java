@@ -33,6 +33,7 @@ public class SearchPage extends JPanel {
    * Sets the content of the search page.
    *
    * @param manager the manager to use for the search page
+   * @return void
    */
   public void setContent(Manager manager) {
     // Text headers
@@ -53,6 +54,7 @@ public class SearchPage extends JPanel {
    * Paints the components on the canvas.
    *
    * @param g the graphics object to use for painting
+   * @return void
    */
   public void paintComponent(Graphics g) {
     super.paintComponent(g);

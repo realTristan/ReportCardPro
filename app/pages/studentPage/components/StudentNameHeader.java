@@ -30,8 +30,9 @@ public class StudentNameHeader extends Text {
     /**
      * Updates the text of the header.
      *
-     * @param name    the name of the student
-     * @param average the average of the student
+     * @param manager the page manager
+     * @param id      the id of the student
+     * @return void
      */
     public void update(Manager manager, String id) {
         double average = manager.cache.getStudentAverage(id);

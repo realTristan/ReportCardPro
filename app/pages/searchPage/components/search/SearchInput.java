@@ -14,8 +14,7 @@ public class SearchInput extends Input {
    * Constructs a new SearchInput object and adds it to the search page canvas at
    * the specified location and size.
    *
-   * @param manager the manager to use for adding the input to the search page
-   *                canvas
+   * @param manager the page manager
    */
   public SearchInput(Manager manager) {
     super(61, 100, 14);
@@ -33,6 +32,7 @@ public class SearchInput extends Input {
 
   /**
    * Clears the search input.
+   * @return void
    */
   public void clear() {
     this.setText("");
@@ -42,9 +42,9 @@ public class SearchInput extends Input {
    * Sets a document listener on the search input to update the results list when
    * the input value changes.
    *
-   * @param manager   the manager to use for getting the students and updating the
-   *                  results list
-   * @param srollPane the scroll pane update when the input value changes
+   * @param manager   the page manager
+   * @param scrollPane the scroll pane update when the input value changes
+   * @return void
    */
   public void setListener(Manager manager, StudentScrollPane scrollPane) {
     // Create a reference to the search input

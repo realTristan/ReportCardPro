@@ -12,6 +12,7 @@ public class GradeInput extends Input {
    * the specified location and size.
    *
    * @param panel the panel to use for adding the input to the canvas
+   * @param grade the grade to display
    */
   public GradeInput(Panel panel, String grade) {
     super(0, 0, 5);

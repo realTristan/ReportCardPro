@@ -12,6 +12,7 @@ public class Encoding {
    * Encodes the specified string using SHA-1.
    *
    * @return the encoded string
+   * @throws NoSuchAlgorithmException if the SHA-1 algorithm is not available
    */
   public static String SHA1() throws NoSuchAlgorithmException {
     // Get the current time in nanoseconds

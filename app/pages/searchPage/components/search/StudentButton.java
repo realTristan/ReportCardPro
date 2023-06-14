@@ -11,9 +11,8 @@ public class StudentButton extends Button {
    * Constructs a new StudentButton object and adds it to the search page canvas
    * at the specified location and size.
    *
-   * @param manager the manager to use for opening the student page when the
-   *                button is clicked
-   * @param s       the text to display on the button
+   * @param manager the page manager
+   * @param name    the name of the student to open the page for
    * @param id      the id of the student to open the page for
    * @param ysep    the y-coordinate of the button
    */

@@ -29,6 +29,7 @@ public class StudentsCache {
 
   /**
    * Exports the current cache of students to a JSON file.
+   * @return void
    */
   public void export() {
     try {
@@ -76,6 +77,7 @@ public class StudentsCache {
    *
    * @param id the id of the student
    * @param subjects the list of subject maps
+   * @return void
    */
   public void updateStudentCourses(String id, List<Map<String, Object>> subjects) {
     // Get the student
@@ -156,6 +158,7 @@ public class StudentsCache {
    * Adds a student to the cache.
    *
    * @param name the name of the student
+   * @return the id of the student
    */
   public String addStudent(String name) throws Exception {
     // Create the student

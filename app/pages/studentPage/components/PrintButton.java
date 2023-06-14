@@ -14,7 +14,9 @@ public class PrintButton extends Button {
   /**
    * Constructs a new PrintReport object.
    *
-   * @param panel the panel to add the component to
+   * @param manager the page manager
+   * @param panel   the panel to use for adding the button to the canvas
+   * @param id      the id of the student to print the report for
    */
   public PrintButton(Manager manager, Panel panel, String id) {
     super("Print", 0, 220);
@@ -28,10 +30,11 @@ public class PrintButton extends Button {
   }
 
   /**
-   * Prints the report for the student with the specified id.
+   * Prints the report card for the student with the specified id.
    *
-   * @param manager the manager to use for getting the student's courses
+   * @param manager the page manager
    * @param id      the id of the student to print the report for
+   * @return void
    */
   public void printReport(Manager manager, String id) {
     // Get the courses

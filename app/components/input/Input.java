@@ -22,6 +22,7 @@ public class Input extends JTextField {
    * Sets the placeholder text for the input.
    *
    * @param placeholder the placeholder text to use
+   * @return void
    */
   public void setPlaceholder(String placeholder) {
     // Create a listener for the input
